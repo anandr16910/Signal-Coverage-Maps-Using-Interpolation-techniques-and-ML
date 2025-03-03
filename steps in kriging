@@ -34,3 +34,4 @@ Steps in kriging:
 	•	Train a Random Forest model using the geospatial coordinates (Lattitude, Longitude, Altitude) and speed as features, with RSRP as the target.
 	•	Predict RSRP values for a dense grid of latitude and longitude points.
 
+
