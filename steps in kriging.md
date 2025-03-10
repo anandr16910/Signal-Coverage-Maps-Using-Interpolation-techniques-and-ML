@@ -28,7 +28,7 @@ Steps:
 Steps in kriging:
 
 
-\gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} \left[ Z(x_i) - Z(x_i + h) \right]^2
+$$ \gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} \left[ Z(x_i) - Z(x_i + h) \right]^2 $$
 
 
 2.2 Machine Learning-Based Map
