@@ -39,7 +39,7 @@ $$ \gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} \left[ Z(x_i) - Z(x_i + h) \rig
 
 
 Where:
-	•	 $$ \gamma(h) $$ = semi-variance for lag distance  h .
+	•	 $$ \gamma(h)\ $$ = semi-variance for lag distance  h .
 	•	 N(h)  = number of observation pairs separated by  h .
 	•	 $$ Z(x_i) $$ = measured value at location  x_i .
 
