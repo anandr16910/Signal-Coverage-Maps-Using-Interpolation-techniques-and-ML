@@ -43,9 +43,43 @@ Where:
 	•	 N(h)  = number of observation pairs separated by  h .
 	•	 $$ Z(x_i) $$ = measured value at location  x_i .
 
+ 2️⃣ Variogram Model (Exponential, Spherical, Gaussian)
+
+To fit a theoretical model to the experimental variogram:
+
+Exponential Model:
+
+
+$$ \gamma(h) = C_0 + C \left(1 - e^{-h/a}\right)  $$
+
+
+Spherical Model:
+
+
+$$ \gamma(h) =
+\begin{cases}
+C_0 + C \left[ \frac{3}{2} \frac{h}{a} - \frac{1}{2} \left( \frac{h}{a} \right)^3 \right], & 0 \leq h \leq a \\
+C_0 + C, & h > a
+\end{cases}  $$
+
+
+Gaussian Model:
+
+
+$$ \gamma(h) = C_0 + C \left(1 - e^{-(h/a)^2}\right) $$
+
+
+Where:
+	•	$$ C_0  = nugget (small-scale variation). $$
+	•	 C  = sill (total variance).
+	•	 a  = range (distance where spatial correlation vanishes).
+
 
 2.2 Machine Learning-Based Map
 	•	Train a Random Forest model using the geospatial coordinates (Lattitude, Longitude, Altitude) and speed as features, with RSRP as the target.
-	•	Predict RSRP values for a dense grid of latitude and longitude points.
+	•	Predict RSRP values for a dense grid of latitude and longitude points
+![ML_algos](https://github.com/user-attachments/assets/1c0cc4ae-3f9b-4f28-b591-7cc83a81415e)
+
+ 
 
 
