@@ -75,11 +75,9 @@ Where:
 	•	 a  = range (distance where spatial correlation vanishes).
 
 
-2.2 Machine Learning-Based Map
-	•	Train a Random Forest model using the geospatial coordinates (Lattitude, Longitude, Altitude) and speed as features, with RSRP as the target.
-	•	Predict RSRP values for a dense grid of latitude and longitude points
-![ML_algos](https://github.com/user-attachments/assets/1c0cc4ae-3f9b-4f28-b591-7cc83a81415e)
+# Simulations:
+<br>
 
- 
+![variogram_comparison](https://github.com/user-attachments/assets/c882d744-8aae-42da-ab12-93bbbe25ab09)
 
 
