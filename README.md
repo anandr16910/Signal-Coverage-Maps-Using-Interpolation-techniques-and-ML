@@ -6,3 +6,6 @@ Signal coverage metrics like SINR and RSRQ using spatial interpolation technique
 
 Machine learning models like random forest and deep neural netwoks work well.
 
+# Given map area
+
+![image](https://github.com/user-attachments/assets/04c2920e-740f-4152-804d-74965f4474f9)
