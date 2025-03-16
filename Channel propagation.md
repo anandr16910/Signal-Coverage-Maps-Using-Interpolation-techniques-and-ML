@@ -8,9 +8,10 @@ MSE: 113.4662
 
 RMSE: 10.6521
 
-# other models:
+## other models:
 <br>
-Free Space
+
+1. Free Space
 
 ![image](https://github.com/user-attachments/assets/1bdf9454-55cc-411e-be4a-9ed805a3e00e)
 
@@ -18,7 +19,9 @@ Theoretical RSS Range: [-90.425470, -67.832862] dBm
 
 Measured RSRP Range: [-137.270000, -58.270000] dBm
 <br>
-Longley Rice:
+
+
+2. Longley Rice:
 
 ![image](https://github.com/user-attachments/assets/5d638c5d-83c4-4a16-9aef-58840b8043d4)
 
