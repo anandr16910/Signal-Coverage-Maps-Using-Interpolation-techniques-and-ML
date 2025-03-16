@@ -63,9 +63,12 @@ Each plot represents the correlation (R-value) between the actual and predicted 
 
 # before Fine tuning Neural networks :
     
-	![alt text](ML_models_error_comparison.jpg)
-
+	![image](ML_models_error_comparison.jpg)
+        
     # after fine tuning:
+
+    ![image](https://github.com/user-attachments/assets/7d9896e1-2273-4d52-b68c-1f01fb44defe)
+
 
 
 
