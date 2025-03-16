@@ -4,3 +4,5 @@ Signal quality estimation using ML techniques
 # abstract:
 Signal coverage metrics like SINR and RSRQ using spatial interpolation techniques. By using ML techniques which enables to estimate or predict RSRQ for various locations in given terrain.
 
+Machine learning models like random forest and deep neural netwoks work well.
+

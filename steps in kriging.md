@@ -84,6 +84,7 @@ optimized model by combining exponential gaussian and spherical model for some l
 
 ![fitted_variogram](https://github.com/user-attachments/assets/cb428e2a-b088-4f4b-ae52-75736546f0b0)
 
+fits well.
 
 
 
