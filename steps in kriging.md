@@ -79,5 +79,10 @@ Where:
 <br>
 
 ![variogram_comparison](https://github.com/user-attachments/assets/c882d744-8aae-42da-ab12-93bbbe25ab09)
+<br>
+
+![fitted_variogram](https://github.com/user-attachments/assets/cb428e2a-b088-4f4b-ae52-75736546f0b0)
+
+
 
 
