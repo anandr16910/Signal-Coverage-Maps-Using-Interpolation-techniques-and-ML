@@ -145,36 +145,4 @@ function error_val = variogram_error(params, bins, gamma_exp, model_type)
     error_val = sum((gamma_exp - gamma_fit).^2); % Least squares error
 end
 
-%% Function: Convert Lat/Lon to UTM
-function [x, y, zone] = deg2utm(lat, lon)
-    k0 = 0.9996;
-    a = 6378137.0; % WGS84 major axis
-    e = 0.0818192; % WGS84 eccentricity
 
-    % UTM Zone Calculation
-    zone = floor((lon + 180) / 6) + 1;
-
-    % Convert degrees to radians
-    lat = deg2rad(lat);
-    lon = deg2rad(lon);
-    
-    % Central meridian of the zone
-    lon0 = deg2rad(-183 + 6 * zone);
-
-    N = a ./ sqrt(1 - e^2 * sin(lat).^2);
-    T = tan(lat).^2;
-    C = e^2 ./ (1 - e^2) .* cos(lat).^2;
-    A = cos(lat) .* (lon - lon0);
-
-    M = a * ((1 - e^2/4 - 3*e^4/64 - 5*e^6/256) * lat ...
-        - (3*e^2/8 + 3*e^4/32 + 45*e^6/1024) .* sin(2*lat) ...
-        + (15*e^4/256 + 45*e^6/1024) .* sin(4*lat) ...
-        - (35*e^6/3072) .* sin(6*lat));
-
-    x = k0 * N .* (A + (1 - T + C) .* A.^3 / 6 + (5 - 18*T + T.^2 + 72*C - 58*e^2) .* A.^5 / 120) + 500000;
-    y = k0 * (M + N .* tan(lat) .* (A.^2 / 2 + (5 - T + 9*C + 4*C.^2) .* A.^4 / 24 ...
-        + (61 - 58*T + T.^2 + 600*C - 330*e^2) .* A.^6 / 720));
-
-    % Adjust for Southern Hemisphere
-    y(lat < 0) = y(lat < 0) + 10000000;
-end
