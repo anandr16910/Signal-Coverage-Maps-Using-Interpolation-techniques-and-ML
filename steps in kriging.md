@@ -86,5 +86,10 @@ optimized model by combining exponential gaussian and spherical model for some l
 
 fits well.
 
+<br>
+RMSE of Kriging: 17.52
+
+OKD: 16.29
+
 
 
