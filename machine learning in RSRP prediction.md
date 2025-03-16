@@ -61,6 +61,11 @@ Each plot represents the correlation (R-value) between the actual and predicted 
 	•	The black regression line fits all data points.
 	•	The high overall R-value (0.9114) suggests the model performs consistently across all datasets.
 
+# before Fine tuning Neural networks :
+    
+	![alt text](ML_models_error_comparison.jpg)
+
+    # after fine tuning:
 
 
 
