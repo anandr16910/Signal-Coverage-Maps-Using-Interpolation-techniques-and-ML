@@ -11,6 +11,7 @@ models used here are random forest, neural networks, SVM and linear regression.
 
 random forest performs better than other three algos. reason being more number of decision trees are used in random forest. can be configured to match optimum error while retaining performance. Neural networks on other hand perform better but can be improved by increasing more number of hidden layers.
 Below graphs illustrate error histogram and number of epochs required for obtaining minimum MSE.
+hyperparamters used for fine tuning in random forests is number of decision trees.
 
 ![nn_training_state](https://github.com/user-attachments/assets/24c4d5df-927a-49d7-b261-9ef295a23d36)
 	•	First Plot (Gradient vs. Epochs)
@@ -62,19 +63,25 @@ Each plot represents the correlation (R-value) between the actual and predicted 
 	•	The high overall R-value (0.9114) suggests the model performs consistently across all datasets.
 
 # before Fine tuning Neural networks :
-    
-	![ML_models_error_comparison](https://github.com/user-attachments/assets/7b4866de-04fc-46d4-b81c-e6b701a621f1)
+
+	
 ![image](ML_models_error_comparison.jpg)
+
+
  
         
 # after fine tuning:
- nueral networks error is minimized.
-    ![image](https://github.com/user-attachments/assets/7d9896e1-2273-4d52-b68c-1f01fb44defe)
-    
+ <br> Neural networks error is minimized.    
+here in model graphs, RMSE of neural networks decreases by 1 db after adding extra layer of hidden neurons.
 
 ![models_comparison](https://github.com/user-attachments/assets/ae54a8ff-b93e-44ae-bb50-01d6dfc6b8af)
 
+![nn_training_perf](https://github.com/user-attachments/assets/f8feeb1e-6abd-4b8a-8caa-8c2676cd146a)
 
+    
+![regression_after_fine_tuning](https://github.com/user-attachments/assets/3f47b681-d768-4511-ab8b-fad625799b88)
+
+![nn_training_state](https://github.com/user-attachments/assets/b55e5c9c-7e4e-4f1a-b85a-76b4bf7ec9ea)
 
 
 
