@@ -82,11 +82,14 @@ Where:
 <br>
 optimized model by combining exponential gaussian and spherical model for some lag distance upto 150.
 
-![fitted_variogram](https://github.com/user-attachments/assets/cb428e2a-b088-4f4b-ae52-75736546f0b0)
+![fitted_variogram](https://github.com/user-attachments/assets/cb428e2a-b088-4f4b-ae52-75736546f0b0 | width=50 )
 
 fits well.
 
 <br>
+
+
+
 RMSE of Kriging: 17.52
 
 OKD: 16.29
