@@ -79,11 +79,12 @@ Where:
 <br>
 
 ![variogram_comparison](https://github.com/user-attachments/assets/c882d744-8aae-42da-ab12-93bbbe25ab09)
+<img src="fitted_variogram" width="300" height="300">
 <br>
 optimized model by combining exponential gaussian and spherical model for some lag distance upto 150.
 
 ![fitted_variogram](https://github.com/user-attachments/assets/cb428e2a-b088-4f4b-ae52-75736546f0b0 | width=50 )
-
+<img src="fitted_variogram" width="300" height="300">
 fits well.
 
 <br>
