@@ -39,9 +39,11 @@ $$ \gamma(h) = \frac{1}{2N(h)} \sum_{i=1}^{N(h)} \left[ Z(x_i) - Z(x_i + h) \rig
 
 
 Where:
-	•	 $$ \gamma(h)\ $$ = semi-variance for lag distance  h .
-	•	 N(h)  = number of observation pairs separated by  h .
-	•	 $$ Z(x_i) $$ = measured value at location  x_i .
+	•	 $\gamma(h)\$ = semi-variance for lag distance  h .
+ 
+  •	 N(h)  = number of observation pairs separated by  h .
+
+ •	 $Z(x_i)$ = measured value at location  x_i .
 
  2️⃣ Variogram Model (Exponential, Spherical, Gaussian)
 
@@ -70,9 +72,12 @@ $$ \gamma(h) = C_0 + C \left(1 - e^{-(h/a)^2}\right) $$
 
 
 Where:
-	•	$$ \C_0  = nugget (small-scale variation). $$
-	•	 C  = sill (total variance).
-	•	 a  = range (distance where spatial correlation vanishes).
+	•	$C_0$ = nugget (small-scale variation).
+ 
+
+ •	 C  = sill (total variance).
+
+ •	 a  = range (distance where spatial correlation vanishes).
 
 # steps involved in computations of kriging process:
  
@@ -101,25 +106,30 @@ Here I use Parallel computing toolbox and some matrix transformations like Chole
 problem 1:
 weight w is singular:
 fix:
-K_augmented = K_augmented + eye(size(K_augmented)) * 1e-6;
+```K_augmented = K_augmented + eye(size(K_augmented)) * 1e-6;```
 where
-Each element in K represents the spatial relationship (covariance or semivariance) between two known data points (xi, yi) and (xj, yj).
-$$ K_{ij} = \gamma(d_{ij}) $$
+each element in K represents the spatial relationship (covariance or semivariance) between two known data points (xi, yi) and (xj, yj).
+
+$K_{ij} = \gamma(d_{ij})$
 where:
-$$	•	\gamma(d_{ij}) is the variogram function (Exponential, Spherical, or Gaussian)
-	•	d_{ij} is the Euclidean distance between points i and j $$
+
+
+•      $\gamma(d_{ij})$  is the variogram function (Exponential, Spherical, or Gaussian)
+
+
+•	$d_{ij}$  is the Euclidean distance between points i and j   
  
 problem 2:
-too much time consuming to execute code ~30 min
+Too much time consuming to execute code ~30 min
 
-w = K_augmented \ k_augmented;  % Original;
+```w = K_augmented \ k_augmented;```
 
 Fix:
 
 w = lsqminnorm(K_augmented, k_augmented); % More stable least-squares solution;
 R = chol(K_augmented + eye(size(K_augmented)) * 1e-6); % Regularization
 
-w = R \ (R' \ k_augmented); % Faster using Cholesky decomposition
+```w = R \ (R' \ k_augmented); % Faster using Cholesky decomposition```
 
 problem 3: NaN values in lambda 
 
@@ -131,7 +141,38 @@ Fix: Use Approximate Nearest Neighbors Instead of Full Matrix
 4️ Enable parallel computing (parpool, parfor)
 5️ Use Cholesky decomposition instead of matrix inversion
 
+Optimized Code snippets:
+```matlab
+parpool; % Start parallel pool (if not already started)
+num_points = numel(Xq);  % Number of grid points
+predicted_rsrp = NaN(num_points, 1);
 
+parfor i = 1:num_points
+    % Find nearest neighbors
+    [idx, dist] = knnsearch([x, y], [Xq(i), Yq(i)], 'K', num_neighbors);
+    
+    % Extract neighbor data
+    x_neighbors = x(idx);
+    y_neighbors = y(idx);
+    rsrp_neighbors = rsrp_values(idx);
+    
+    % Compute distance matrix
+    D_neighbors = pdist2([x_neighbors, y_neighbors], [x_neighbors, y_neighbors]);
+    K_neighbors = variogram_model(D_neighbors);  % Compute variogram model
+    
+    % Solve Kriging system
+    K_neighbors_aug = [K_neighbors, ones(num_neighbors, 1); ones(1, num_neighbors), 0];
+    K_neighbors_aug = K_neighbors_aug + eye(size(K_neighbors_aug)) * 1e-4; % Regularization
+
+    k_neighbors = variogram_model(dist'); % Compute covariances for prediction point
+    
+    % Solve for weights (lambda)
+    lambda = K_neighbors_aug \ [k_neighbors; 1];
+
+    % Compute predicted RSRP
+    predicted_rsrp(i) = sum(lambda(1:end-1) .* rsrp_neighbors);
+end
+```
 
 # Simulations:
 <br>
