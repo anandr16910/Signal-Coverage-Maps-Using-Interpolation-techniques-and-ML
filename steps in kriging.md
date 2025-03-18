@@ -89,7 +89,7 @@ fits well.
 
 <br>
 
-<img src="okd_improved.jpg" width="300" height="300">
+<img src="okd_improved.jpg" width="400" height="300">
 
 |RMSE of Kriging: | 17.52 |
 |----|----|
