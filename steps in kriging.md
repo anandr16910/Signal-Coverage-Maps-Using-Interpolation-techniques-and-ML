@@ -70,9 +70,11 @@ $$ \gamma(h) = C_0 + C \left(1 - e^{-(h/a)^2}\right) $$
 
 
 Where:
-	•	$$ C_0  = nugget (small-scale variation). $$
+	•	$$ \C_0  = nugget (small-scale variation). $$
 	•	 C  = sill (total variance).
 	•	 a  = range (distance where spatial correlation vanishes).
+
+
 
 
 # Simulations:
