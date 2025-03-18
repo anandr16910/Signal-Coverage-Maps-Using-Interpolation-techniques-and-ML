@@ -74,6 +74,62 @@ Where:
 	•	 C  = sill (total variance).
 	•	 a  = range (distance where spatial correlation vanishes).
 
+# steps involved in computations of kriging process:
+ 
+•	Step 1:
+To load data for spatial coordinates (x, y) and measured values (rsrp_values).
+
+ •	Step 2:
+Computes the experimental variogram using compute_variogram function(refer OKD by various methods.m) with 50 bins, then optimizes the exponential variogram parameters using fminsearch and error function variogram_error.
+
+•	Step 3:
+Constructs the kriging system matrix. The matrix K is built from the variogram model evaluated on the distances between sample points. A row and column are appended to enforce the constraint that the weights sum to 1.
+
+ •	Step 4:
+Defines a regular grid (using meshgrid) over the extent of the data. The grid resolution is controlled by numGridPoints.
+
+ •	Step 5:
+For each grid point, the distances to all sample points are computed, and the corresponding variogram values are obtained. The kriging system (augmented with the Lagrange multiplier) is solved for the weights, and the predicted value is computed as the weighted sum of the sample values.
+
+ •	Step 6:
+The predicted values are reshaped into the grid format and plotted using contourf (or optionally imagesc).
+
+Drawbacks of this method: Computationally expensive and also requires special multi core CPU's
+Solution: Optimized code as given in (OKD by various methods)
+Here I use Parallel computing toolbox and some matrix transformations like Cholesky decomposition:
+
+problem 1:
+weight w is singular:
+fix:
+K_augmented = K_augmented + eye(size(K_augmented)) * 1e-6;
+where
+Each element in K represents the spatial relationship (covariance or semivariance) between two known data points (xi, yi) and (xj, yj).
+$$ K_{ij} = \gamma(d_{ij}) $$
+where:
+$$	•	\gamma(d_{ij}) is the variogram function (Exponential, Spherical, or Gaussian)
+	•	d_{ij} is the Euclidean distance between points i and j $$
+ 
+problem 2:
+too much time consuming to execute code ~30 min
+
+w = K_augmented \ k_augmented;  % Original;
+
+Fix:
+
+w = lsqminnorm(K_augmented, k_augmented); % More stable least-squares solution;
+R = chol(K_augmented + eye(size(K_augmented)) * 1e-6); % Regularization
+
+w = R \ (R' \ k_augmented); % Faster using Cholesky decomposition
+
+problem 3: NaN values in lambda 
+
+Fix: Use Approximate Nearest Neighbors Instead of Full Matrix
+
+1️Increase grid step size (step_size = 50 instead of 1 or 10)
+2️ Use pdist2() for fast distance calculations (avoid loops)
+3️ Use k-nearest neighbors (knnsearch()) to reduce problem size
+4️ Enable parallel computing (parpool, parfor)
+5️ Use Cholesky decomposition instead of matrix inversion
 
 
 
@@ -92,6 +148,8 @@ fits well.
 <br>
 
 <img src="okd_improved.jpg" width="400" height="300">
+
+$$ RMSE =  \sqrt{\frac{1}{N} \sum_{i=1}^{N} (RSRP_{\text{true}, i} - RSRP_{\text{pred}, i})^2}   $$
 
 |RMSE of Kriging: | 17.52 |
 |----|----|
