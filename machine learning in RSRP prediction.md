@@ -94,5 +94,17 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 <img src="nn_default_LM\nn_training_state.jpg" width="300" height="300">
 
 
+## Measurements: ##
+
+| Algorithmn  | MAE | RMSE  |
+|----|----|----|
+| Linear Regression  |   9.9985 |   12.394|
+| Random Forest  |    2.8281   | 3.8075 |
+| SVM  |  4.2522   | 5.5051 |
+| Neural Network |   3.8284 |   4.9443 |
+
+
+
+
 
 
