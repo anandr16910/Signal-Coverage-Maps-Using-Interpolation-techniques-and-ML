@@ -89,11 +89,11 @@ fits well.
 
 <br>
 
+<img src="okd_improved.jpg" width="300" height="300">
 
-
-RMSE of Kriging: 17.52
-
-OKD: 16.29
+|RMSE of Kriging: | 17.52 |
+|----|----|
+|OKD with exponential variogram configuration: |16.29 |
 
 
 
