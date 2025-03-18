@@ -72,16 +72,20 @@ Each plot represents the correlation (R-value) between the actual and predicted 
         
 # after fine tuning:
  <br> Neural networks error is minimized.    
-here in model graphs, RMSE of neural networks decreases by 1 db after adding extra layer of hidden neurons.
+here in model graphs, RMSE of neural networks decreases by 1 to 1.5 dB after adding extra layer of hidden neurons.
 
-![models_comparison](https://github.com/user-attachments/assets/ae54a8ff-b93e-44ae-bb50-01d6dfc6b8af)
+<img src="nn_default_LM\neural architecture.png" width="300" height="300">
+architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural network architecture.
 
-![nn_training_perf](https://github.com/user-attachments/assets/f8feeb1e-6abd-4b8a-8caa-8c2676cd146a)
+<img src="nn_default_LM\models_comparison.jpg" width="300" height="300">
 
+<img src="nn_default_LM\nn_training_perf.jpg" width="300" height="300">
     
-![regression_after_fine_tuning](https://github.com/user-attachments/assets/3f47b681-d768-4511-ab8b-fad625799b88)
 
-![nn_training_state](https://github.com/user-attachments/assets/b55e5c9c-7e4e-4f1a-b85a-76b4bf7ec9ea)
+<img src="nn_default_LM\regression_after_fine_tuning.jpg" width="300" height="300">
+
+
+<img src="nn_default_LM\nn_training_state.jpg" width="300" height="300">
 
 
 
