@@ -97,12 +97,16 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 
 
-
-
 <img src="nn_default_LM\regression_after_fine_tuning.jpg" width="300" height="300">
 
 
+
 <img src="nn_default_LM\nn_training_state.jpg" width="300" height="300">
+
+* Regression Line Fit
+  - The solid blue, green, red, and black lines represent the best linear fit to the data.
+  - The dotted line (Y = T) is the ideal fit (perfect predictions).
+  - Your model’s predictions are very close to the ideal fit, meaning it performs well.
 
 
 ## Measurements: ##
