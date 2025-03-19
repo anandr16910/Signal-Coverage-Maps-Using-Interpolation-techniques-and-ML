@@ -1,8 +1,20 @@
 # ML learning models for RSRP prediction: #
+<br>
+	
+*	Model Training:  
+Four models are trained:  
+	•	Linear Regression using fitlm  
+	•	Support Vector Regression (SVR) using fitrsvm  
+	•	Random Forest using TreeBagger (with out-of-bag prediction enabled)  
+	•	Neural Network Regression using fitrnet  
 
-models used here are random forest, neural networks, SVM and linear regression.
-
-![random_forest | width = 50](https://github.com/user-attachments/assets/2600cabf-d9f7-4f92-b96a-0f451bc67561c)  
+*	Data Splitting:
+The data is split into training (80%) and test (20%) sets using MATLAB’s cvpartition.
+*	Evaluation:
+Predictions are made on the test set for each model, and the RMSE (Root Mean Squared Error) is calculated to compare performance.
+*	Visualization:
+Scatter plots compare actual RSRP values versus predicted RSRP values for each model. The reference line y = x helps visualize prediction accuracy.
+<img src=""> 
 ![ML_models_comparison](https://github.com/user-attachments/assets/55d51378-07e1-429b-8508-e0f31578ac7b)
 ![geospatial_interpolation](https://github.com/user-attachments/assets/4f63445b-533b-486a-ab7c-fc6b989993c0)
 ![ML_models_error_comparison](https://github.com/user-attachments/assets/9748f98e-66cb-43b6-b5d8-905d2b30daed)
@@ -81,7 +93,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 |Before Fine Tuning                        |                    After Fine Tuning           |
 |:---------------------------------------:|:-----------------------------------------------:|
- <img src="https://github.com/user-attachments/assets/77866657-0c59-482e-8b49-019d5b79c96b" width = "200" height = "200">|<img src="nn_default_LM\nn_training_perf.jpg" width="200" height="200">
+ <img src="https://github.com/user-attachments/assets/77866657-0c59-482e-8b49-019d5b79c96b" width = "300" height = "300">|<img src="nn_default_LM\nn_training_perf.jpg" width="300" height="300">
 
 
 
