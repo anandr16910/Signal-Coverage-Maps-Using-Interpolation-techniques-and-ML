@@ -107,14 +107,14 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
   - Since all R-values are above 0.92, given model has a strong linear relationship between the predicted and actual values, indicating a good fit.
 
 
-
-<img src="nn_default_LM\nn_training_state.jpg" width="300" height="300">
+`<img src="nn_default_LM\nn_training_state.jpg" width="300" height="300">`
 
 * Regression Line Fit
   - The solid blue, green, red, and black lines represent the best linear fit to the data.
   - The dotted line (Y = T) is the ideal fit (perfect predictions).
   - Your model’s predictions are very close to the ideal fit, meaning it performs well.
-
+* Bias in Predictions?
+  - The regression equations show slight offsets (+13, +14), which means model might be slightly biased, but the high R-values suggest it’s still performing well.
 
 ## Measurements: ##
 
@@ -123,8 +123,8 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 | Linear Regression  |   9.9985 |   12.394|
 | Random Forest  |    2.8281   | 3.8075 |
 | SVM  |  4.2522   | 5.5051 |
-| Neural Network |   3.8284 |   4.9443 |
-
+| Neural Network |   3.8284 |   5.2443 |
+| NN after fine tuning | 3.38 | 4.32 | 
 
 
 
