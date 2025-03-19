@@ -98,6 +98,13 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 
 <img src="nn_default_LM\regression_after_fine_tuning.jpg" width="300" height="300">
+  
+* Correlation Coefficient (R values)
+  - Training: R = 0.93373
+  - Validation: R = 0.92421
+  - Test: R = 0.92515
+  - Overall: R = 0.93107
+  - Since all R-values are above 0.92, given model has a strong linear relationship between the predicted and actual values, indicating a good fit.
 
 
 
