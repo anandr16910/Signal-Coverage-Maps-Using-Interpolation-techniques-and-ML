@@ -4,8 +4,13 @@ Signal quality estimation using ML techniques
 # abstract:
 Signal coverage metrics like SINR and RSRQ using spatial interpolation techniques. By using ML techniques which enables to estimate or predict RSRQ for various locations in given terrain.
 
-Machine learning models like random forest and deep neural netwoks work well.
+Machine learning models like random forest and deep neural networks work well.
 
 # Given map area
 
 ![image](https://github.com/user-attachments/assets/04c2920e-740f-4152-804d-74965f4474f9)
+
+# Theoretical and ML based RSRP:
+Channel propagation.md
+steps in kriging.md
+machine learning in RSRP prediction.md
