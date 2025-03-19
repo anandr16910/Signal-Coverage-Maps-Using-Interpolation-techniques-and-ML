@@ -16,5 +16,4 @@ Machine learning models like random forest and deep neural networks work well.
 - [Kriging and Ordinary Kriging method](steps in kriging.md)
 - [ML in RSRP prediction](machine learning in RSRP prediction.md)
 
-# Theoretical and ML based RSRP:
 
