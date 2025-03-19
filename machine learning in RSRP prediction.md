@@ -1,4 +1,4 @@
-# ML learning models for RSRP prediction: #
+# ML models for RSRP prediction: #
 <br>
 	
 *	Model Training:  
