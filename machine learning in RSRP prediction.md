@@ -84,6 +84,8 @@ Each plot represents the correlation (R-value) between the actual and predicted 
 # after fine tuning:
  <br> Neural networks error is minimized.    
 here in model graphs, RMSE of neural networks decreases by 1 to 1.5 dB after adding extra layer of hidden neurons.
+In MATLAB, the default training function for neural networks is Levenberg-Marquardt (trainlm).
+
 
 <img src="nn_default_LM\neural architecture.png" width="300" height="300">
 architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural network architecture.
