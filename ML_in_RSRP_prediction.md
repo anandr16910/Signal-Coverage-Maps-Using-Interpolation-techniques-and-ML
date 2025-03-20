@@ -83,8 +83,20 @@ Each plot represents the correlation (R-value) between the actual and predicted 
         
 # after fine tuning:
  <br> Neural networks error is minimized.    
-here in model graphs, RMSE of neural networks decreases by 1 to 1.5 dB after adding extra layer of hidden neurons.
+here in model graphs, RMSE of neural networks decreases by 1 to 1.5 dB after adding extra layer of hidden neurons.  
+
 In MATLAB, the default training function for neural networks is Levenberg-Marquardt (trainlm).
+* Levenberg-Marquardt is superior to other method(gradient with momentum and adaptive learning) in following ways:
+  - Hybrid second-order method:
+    - trainlm combines the advantages of Gauss-Newton and Gradient Descent, which allows it to efficiently adjust weights with minimal error.
+    - It calculates an approximate Hessian matrix, which makes it much faster for small to medium-sized networks (in my dataset of elements upto 15k).
+
+  - Fast convergence & better accuracy
+	•	Since it approximates second-order derivatives, it can quickly find a good minimum without being stuck in poor local minima.
+	•	Ideal for function approximation & regression problems, such as predicting RSRP values.
+
+✅ Handles small datasets well
+	•	Works well for moderate-sized datasets because it efficiently finds the best weights using second-order derivatives.
 
 
 <img src="nn_default_LM\neural architecture.png" width="300" height="300">
