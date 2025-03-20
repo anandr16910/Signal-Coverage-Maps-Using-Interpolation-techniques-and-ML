@@ -5,11 +5,11 @@ Please refer this code [log distance propagation model](s3_ldpl.m)
 
 ![image](https://github.com/user-attachments/assets/866c1521-42e1-41f1-b08b-d3770f7653af) 
 
-Fitted Path Loss Exponent (n): -2.5635
+|Fitted Path Loss Exponent (n): | -2.5635 |
+|-----|-----|
+|MSE: | 113.4662 |
 
-MSE: 113.4662
-
-RMSE: 10.6521
+|RMSE: | 10.6521 |
 
 ## other models:
 <br>
