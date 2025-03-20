@@ -92,11 +92,11 @@ In MATLAB, the default training function for neural networks is Levenberg-Marqua
     - It calculates an approximate Hessian matrix, which makes it much faster for small to medium-sized networks (in my dataset of elements upto 15k).
 
   - Fast convergence & better accuracy
-	•	Since it approximates second-order derivatives, it can quickly find a good minimum without being stuck in poor local minima.
-	•	Ideal for function approximation & regression problems, such as predicting RSRP values.
+    - Since it approximates second-order derivatives, it can quickly find a good minimum without being stuck in poor local minima.
+    - Ideal for function approximation & regression problems, such as predicting RSRP values.
 
-✅ Handles small datasets well
-	•	Works well for moderate-sized datasets because it efficiently finds the best weights using second-order derivatives.
+  - Handles small datasets well
+    - Works well for moderate-sized datasets because it efficiently finds the best weights using second-order derivatives.
 
 
 <img src="nn_default_LM\neural architecture.png" width="300" height="300">
