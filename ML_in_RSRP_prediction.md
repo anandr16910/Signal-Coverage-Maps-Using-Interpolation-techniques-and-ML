@@ -17,7 +17,7 @@ Scatter plots compare actual RSRP values versus predicted RSRP values for each m
 <img src="ML_models/ML_models_comparison.jpg" width="300"> 
 <img src="ML_models/ML_models_error_comparison.jpg" width="300">
 
-# performance
+# Performance
 
 random forest performs better than other three algos. reason being more number of decision trees are used in random forest. can be configured to match optimum error while retaining performance. Neural networks on other hand perform better but can be improved by increasing more number of hidden layers.
 
