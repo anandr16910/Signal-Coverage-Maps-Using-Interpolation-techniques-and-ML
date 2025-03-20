@@ -1,5 +1,6 @@
 # Log Distance Propagation model:
 
+Please refer this code ![ld propagation model](s3_ldpl.m)
 ![image](https://github.com/user-attachments/assets/866c1521-42e1-41f1-b08b-d3770f7653af) 
 
 Fitted Path Loss Exponent (n): -2.5635
