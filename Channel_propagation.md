@@ -8,7 +8,6 @@ Please refer this code [log distance propagation model](s3_ldpl.m)
 |Fitted Path Loss Exponent (n): | -2.5635 |
 |-----|-----|
 |MSE: | 113.4662 |
-
 |RMSE: | 10.6521 |
 
 ## other models:
