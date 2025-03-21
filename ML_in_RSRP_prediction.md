@@ -166,7 +166,11 @@ here I tune:
   - MinLeafSize (minimum number of samples per leaf)    
     ✅ 1  	🔲 2	    🔲4
   - MaxNumSplits (maximum depth of trees)    
-    🔲20      🔲50      	 🔲70        	🔲100       ✅ 170
+    🔲20        🔲50      	 🔲70          	🔲100         ✅ 170
+* remarks  
+  - NumTrees ⬇️ (150  ➡️  50) : Fewer trees might be reducing overfitting.
+  - MinLeafSize ⬆️ (2  ➡️  10) : Larger leaves can smooth predictions, reducing variance.
+  - MaxNumSplits ⬆️ (20  ➡️  170) : More splits might help capture finer decision boundaries.
    
 <img src="ML_models/RandomForestOptimization.jpg" width="400">
 
