@@ -154,6 +154,14 @@ after some more tuning:
    |  KNN              |   19.363  |
    | GLM               |  12.817  |
 
+
+Define Hyperparameter Grid for tuning random forest ML model:
+
+here I tune:
+* Hyperparameters:
+  - NumLearningCycles (number of trees in the forest)  
+  - MinLeafSize (minimum number of samples per leaf)  
+  - MaxNumSplits (maximum depth of trees)  
    
 <img src="ML_models/RandomForestOptimization.jpg" width="400">
 
