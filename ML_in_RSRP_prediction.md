@@ -154,6 +154,9 @@ after some more tuning:
    |  KNN              |   19.363  |
    | GLM               |  12.817  |
 
+   
+<img src="ML_models/RandomForestOptimization.jpg" width="400">
+
 
 
 
