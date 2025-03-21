@@ -160,7 +160,8 @@ refer [Ml models code](better_models.m)
 
 here I tune:
 * Hyperparameters:
-  - NumLearningCycles (number of trees in the forest)  
+  - NumLearningCycles (number of trees in the forest)
+  - numTrees  - [ ] 25   - [ ] 50   - [X] 75  
   - MinLeafSize (minimum number of samples per leaf)  
   - MaxNumSplits (maximum depth of trees)  
    
