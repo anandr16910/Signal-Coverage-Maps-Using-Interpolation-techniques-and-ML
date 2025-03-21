@@ -142,6 +142,8 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 
 after some more tuning:
+  
+<img src="ML_models/better_models.jpg" width="300">   
 
 |Model   |          RMSE |
 |----|-----|
