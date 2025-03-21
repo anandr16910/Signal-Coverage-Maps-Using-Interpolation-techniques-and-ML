@@ -141,7 +141,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 | NN after fine tuning | 3.38 | 4.32 | 
 
 
-after some more tuning and exploring other ML models:
+## after some more tuning and exploring other ML models:
   
 <img src="ML_models/better_ML_models.jpg" width="400">   
 
@@ -154,8 +154,9 @@ after some more tuning and exploring other ML models:
    |  KNN              |   19.363  |
    | GLM               |  12.817  |
 
+refer [Ml models code](better_models.m)
 
-Define Hyperparameter Grid for tuning random forest ML model:
+# Hyperparameter Grid for tuning random forest ML model:
 
 here I tune:
 * Hyperparameters:
