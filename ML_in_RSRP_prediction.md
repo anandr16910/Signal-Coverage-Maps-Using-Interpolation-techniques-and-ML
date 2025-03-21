@@ -161,9 +161,12 @@ refer [Ml models code](better_models.m)
 here I tune:
 * Hyperparameters:
   - NumLearningCycles (number of trees in the forest)
-  - numTrees  - [ ] 25   - [ ] 50   - [X] 75  
-  - MinLeafSize (minimum number of samples per leaf)  
-  - MaxNumSplits (maximum depth of trees)  
+  - numTrees    🔲: 25     🔲 50     :white_check_mark: 75
+   
+  - MinLeafSize (minimum number of samples per leaf)    
+    ✅ 1  	🔲 2	    🔲4
+  - MaxNumSplits (maximum depth of trees)    
+    🔲20      🔲50      	 🔲70        	🔲100       ✅ 170
    
 <img src="ML_models/RandomForestOptimization.jpg" width="400">
 
