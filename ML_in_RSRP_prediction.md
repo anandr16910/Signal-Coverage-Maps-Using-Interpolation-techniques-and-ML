@@ -143,15 +143,14 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 after some more tuning:
 
-Model             RMSE 
-    _____________________    ______
-
- {'Neural Network'   }    3.1425
-    {'Random Forest'    }    2.3919
-    {'SVR'              }    5.5004
-    {'Gradient Boosting'}    4.8598
-    {'KNN'              }    19.363
-    {'GLM'              }    12.817
+|Model   |          RMSE |
+|----|-----|
+ |{'Neural Network'   |    3.1425 |
+ |   {'Random Forest'    } |   2.3919|
+   | {'SVR'              } |   5.5004 |
+   | {'Gradient Boosting'} |   4.8598 |
+   |  {'KNN'              } |   19.363  |
+   | {'GLM'              }  |  12.817  |
 
 
 
