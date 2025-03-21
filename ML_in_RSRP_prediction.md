@@ -121,7 +121,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
   - Since all R-values are above 0.92, given model has a strong linear relationship between the predicted and actual values, indicating a good fit.
 
 
-`<img src="nn_default_LM\nn_training_state.jpg" width="300" height="300">`
+
 
 * Regression Line Fit
   - The solid blue, green, red, and black lines represent the best linear fit to the data.
