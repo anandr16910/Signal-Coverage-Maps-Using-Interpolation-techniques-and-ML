@@ -141,20 +141,6 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 | NN after fine tuning | 3.38 | 4.32 | 
 
 
-## after some more tuning and exploring other ML models:
-  
-<img src="ML_models/better_ML_models.jpg" width="400">   
-
-|Model   |          RMSE |
-|----|-----|
- |Neural Network   |    3.1425 |
- |   Random Forest |   2.3919|
-   | Support Vector Regression               |   5.5004 |
-   | Gradient Boosting |   4.8598 |
-   |  KNN              |   19.363  |
-   | GLM               |  12.817  |
-
-refer [Ml models code](better_models.m)
 
 ## Hyperparameter Grid for tuning random forest ML model:
 
@@ -167,14 +153,37 @@ here I tune:
     ✅ 1  	🔲 2	    🔲4
   - MaxNumSplits (maximum depth of trees)    
     🔲20        🔲50      	 🔲70          	🔲100         ✅ 170
+
+    
 * remarks  
   - NumTrees ⬇️ (150  ➡️  50) : Fewer trees might be reducing overfitting.
   - MinLeafSize ⬆️ (2  ➡️  10) : Larger leaves can smooth predictions, reducing variance.
   - MaxNumSplits ⬆️ (20  ➡️  170) : More splits might help capture finer decision boundaries.
    
-<img src="ML_models/RandomForestOptimization.jpg" width="400">
+<img src="ML_models/RandomForestOptimization.jpg" width="500">
 
 refer [optimized random forest code](random_forest_leafsize.m) 
+
+
+## After some more tuning and exploring other ML models:
+Using Cvpartition(cross validation) with KFold = 5 and for better compuation thanks to Matlab Parallel computing toolbox. Resuts of other ML models performances are summarized
+below:
+
+
+<img src="ML_models/better_ML_models.jpg" width="400">   
+
+|Model   |          RMSE |
+|----|-----|
+ |Neural Network   |    3.1425 |
+ |   Random Forest |   2.3919|
+   | Support Vector Regression               |   5.5004 |
+   | Gradient Boosting |   4.8598 |
+   |  KNN              |   19.363  |
+   | GLM               |  12.817  |
+
+refer [Ml models code](better_models.m)
+      
+
 
 
 
