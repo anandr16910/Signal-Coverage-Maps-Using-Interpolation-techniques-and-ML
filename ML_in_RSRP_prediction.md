@@ -156,7 +156,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 refer [Ml models code](better_models.m)
 
-# Hyperparameter Grid for tuning random forest ML model:
+## Hyperparameter Grid for tuning random forest ML model:
 
 here I tune:
 * Hyperparameters:
