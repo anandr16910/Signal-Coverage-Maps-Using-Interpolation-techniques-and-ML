@@ -159,6 +159,7 @@ here I tune:
   - NumTrees ⬇️ (150  ➡️  50) : Fewer trees might be reducing overfitting.
   - MinLeafSize ⬆️ (2  ➡️  10) : Larger leaves can smooth predictions, reducing variance.
   - MaxNumSplits ⬆️ (20  ➡️  170) : More splits might help capture finer decision boundaries.
+  - fitrensemble is used for better results TreeBagger can be used.
    
 <img src="ML_models/RandomForestOptimization.jpg" width="500">
 
