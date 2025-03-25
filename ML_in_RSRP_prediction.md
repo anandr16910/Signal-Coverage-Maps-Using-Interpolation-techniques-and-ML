@@ -85,6 +85,16 @@ Each plot represents the correlation (R-value) between the actual and predicted 
  <br> Neural networks error is minimized.    
 here in model graphs, RMSE of neural networks decreases by 1 to 1.5 dB after adding extra layer of hidden neurons.  
 
+For this Fine tuning process in order to have better i.e minimum RMSE, a 9-fold cross-validation (CV) using cvpartition(size(X,1), 'KFold', 9)is used. 
+* Here the dataset is split as follows:
+  - The entire dataset is divided into 9 equal parts (folds).    
+  - The model is trained on 8 folds (≈ 88.89% of the data) and tested on 1 fold (≈ 11.11% of the data).  
+  - This process repeats 9 times, with each fold serving as the test set exactly once.
+* advantages:
+  - More reliable RMSE: Reduces variance compared to a single train-test split.  
+  - Better generalization: The model trains and tests on different parts of the dataset multiple times.  
+  - Efficient use of data: Every sample is used for both training and testing.
+  - 
 In MATLAB, the default training function for neural networks is Levenberg-Marquardt (trainlm).
 * Levenberg-Marquardt is superior to other method(gradient with momentum and adaptive learning) in following ways:
   - Hybrid second-order method:
@@ -183,6 +193,13 @@ below:
    | GLM               |  12.817  |
 
 refer [Ml models code](better_models.m)
+
+## GUI based ML models:
+
+by using RegressionLearner app in MAtlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparamter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
+
+Let me illustrate this with example:
+<imge src>
       
 
 
