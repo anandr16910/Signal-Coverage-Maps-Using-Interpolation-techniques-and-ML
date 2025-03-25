@@ -186,21 +186,23 @@ below:
 |Model   |          RMSE |
 |----|-----|
  |Neural Network   |    3.1425 |
- |   Random Forest |   2.3919|
+ |   Random Forest(TreeBagger) |   2.3919|
    | Support Vector Regression               |   5.5004 |
    | Gradient Boosting |   4.8598 |
    |  KNN              |   19.363  |
    | GLM               |  12.817  |
 
 refer [Ml models code](better_models.m)
-observation: Minimum RMSE corresponding to Random forest was obtained when the i tried with TreeBagger model (where num of trees is set to 75)
+observation: Minimum RMSE corresponding to Random forest was obtained when the i tried with TreeBagger model (where num of trees is set to 75). TreeBagger although with fewer hyperparameters to tune is superior to FitEnsemble method. 
+
+
 ## GUI based ML models:
 
 By using RegressionLearner app in MAtlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparameter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
 
 Let me illustrate this with an example:
 On training and testing several models in regression Learner app, I get to sort these models in ascending order of RMSE(test).
-from those models i pick few models with best rmse and then tune their hyperparamters like i had done for GPR process.
+from those models I pick few models with best rmse and then tune their hyperparameters for instance I had done for GPR process.
 
 <br>
 <img src= "ML_models/regLearner.png" width="800"> 
@@ -208,6 +210,17 @@ from those models i pick few models with best rmse and then tune their hyperpara
 <br>
 
 <img src="ML_models/gpr_best_rmse_ML.jpg" width="600">
+
+## Measurements:
+
+| Gaussian Process Regression configuration | RMSE (in dBm) |
+|--------|-------|
+| Squared Exponential | 4.1 |
+| Matern 5/2 | 3.544|
+| Rational Quadratic| 2.86|
+| Exponential | 2.49 |
+| Optimizable - isotropic exponential | 2.28|
+
       
 
 
