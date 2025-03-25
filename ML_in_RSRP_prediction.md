@@ -14,8 +14,8 @@ The data is split into training (80%) and test (20%) sets using MATLAB’s cvpar
 Predictions are made on the test set for each model, and the RMSE (Root Mean Squared Error) is calculated to compare performance.
 *	Visualization:
 Scatter plots compare actual RSRP values versus predicted RSRP values for each model. The reference line y = x helps visualize prediction accuracy.
-<img src="ML_models/ML_models_comparison.jpg" width="300"> 
-<img src="ML_models/ML_models_error_comparison.jpg" width="300">
+<img src="ML_models/ML_models_comparison.jpg" width="500"> 
+<img src="ML_models/ML_models_error_comparison.jpg" width="500">
 
 # Performance
 
