@@ -220,8 +220,9 @@ from those models I pick few models with best rmse and then tune their hyperpara
 | Rational Quadratic| 2.86|
 | Exponential | 2.49 |
 | Optimizable - isotropic exponential | 2.28|
+|-----|----|------|
 | Random Forest | TreeBagger | 2.39 |
-|               | Ensemble(optimized) | 3.8|
+|               | Ensemble(optimized) | 3.8 |
    
 From above table, it is evident that Optimizable GPR performs better than random forest(TreeBagger Model and ensemble model)
 
