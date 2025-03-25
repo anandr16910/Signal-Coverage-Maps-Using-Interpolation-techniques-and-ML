@@ -198,7 +198,7 @@ observation: Minimum RMSE corresponding to Random forest was obtained when the i
 
 ## GUI based ML models:
 
-By using RegressionLearner app in MAtlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparameter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
+By using RegressionLearner app in Matlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparameter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
 
 Let me illustrate this with an example:
 On training and testing several models in regression Learner app, I get to sort these models in ascending order of RMSE(test).
@@ -220,6 +220,10 @@ from those models I pick few models with best rmse and then tune their hyperpara
 | Rational Quadratic| 2.86|
 | Exponential | 2.49 |
 | Optimizable - isotropic exponential | 2.28|
+| Random Forest | TreeBagger | 2.39 |
+|               | Ensemble(optimized) | 3.8|
+   
+From above table, it is evident that Optimizable GPR performs better than random forest(TreeBagger Model and ensemble model)
 
       
 
