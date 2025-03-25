@@ -198,8 +198,15 @@ refer [Ml models code](better_models.m)
 
 by using RegressionLearner app in MAtlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparamter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
 
-Let me illustrate this with example:
-<img src="ML_models/gpr_best_rmse_ML.jpg" width="300">
+Let me illustrate this with an example:
+On training and testing several models in regression Learner app, i get to sort these models in ascending order of RMSE(test).
+from those models i pick few models with best rmse and then tune their hyperparamters like i had done for GPR process.
+
+<br>
+<img src= "ML_models/reglearner.jpg" width="500"> 
+
+
+<img src="ML_models/gpr_best_rmse_ML.jpg" width="400">
       
 
 
