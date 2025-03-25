@@ -19,7 +19,7 @@ Scatter plots compare actual RSRP values versus predicted RSRP values for each m
 
 # Performance
 
-random forest performs better than other three algos. reason being more number of decision trees are used in random forest. can be configured to match optimum error while retaining performance. Neural networks on other hand perform better but can be improved by increasing more number of hidden layers.
+Random forest performs better than other three ML models. Reason being more number of decision trees are used in random forest. This model can be configured to match optimum error while retaining performance. Neural networks on other hand perform better but can be improved by increasing more number of hidden layers.
 
 Below graphs illustrate error histogram and number of epochs required for obtaining minimum MSE.
 hyperparamters used for fine tuning in random forests is number of decision trees.
@@ -54,7 +54,7 @@ Here, The plot shows how the MSE reduces over time.
 
  This image contains four scatter plots, showing the relationship between the target (actual RSRP values) and output (predicted values from the neural network) for different datasets.
 
-Each plot represents the correlation (R-value) between the actual and predicted values:
+Each plot represents the correlation (R-value) between the actual and predicted values:     
 	1.	Top Left: Training Data (R = 0.9125)  
 	•	Shows how well the neural network fits the training data.  
 	•	The blue line represents the regression fit.  
