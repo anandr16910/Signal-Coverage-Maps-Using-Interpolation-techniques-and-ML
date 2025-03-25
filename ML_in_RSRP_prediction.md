@@ -169,7 +169,7 @@ here I tune:
   - NumTrees ⬇️ (150  ➡️  50) : Fewer trees might be reducing overfitting.
   - MinLeafSize ⬆️ (2  ➡️  10) : Larger leaves can smooth predictions, reducing variance.
   - MaxNumSplits ⬆️ (20  ➡️  170) : More splits might help capture finer decision boundaries.
-  - fitrensemble is used for better results TreeBagger can be used.
+  - fitrensemble model is used for tuning above parameters and minimum RMSE was obtained.  
    
 <img src="ML_models/RandomForestOptimization.jpg" width="500">
 
@@ -177,7 +177,7 @@ refer [optimized random forest code](random_forest_leafsize.m)
 
 
 ## After some more tuning and exploring other ML models:
-Using Cvpartition(cross validation) with KFold = 5 and for better compuation thanks to Matlab Parallel computing toolbox. Resuts of other ML models performances are summarized
+Using Cvpartition(cross validation) with KFold = 9 and for better computation thanks to Matlab Parallel computing toolbox. Results of other ML models performances are summarized
 below:
 
 
@@ -193,13 +193,13 @@ below:
    | GLM               |  12.817  |
 
 refer [Ml models code](better_models.m)
-
+observation: Minimum RMSE corresponding to Random forest was obtained when the i tried with TreeBagger model (where num of trees is set to 75)
 ## GUI based ML models:
 
-by using RegressionLearner app in MAtlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparamter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
+By using RegressionLearner app in MAtlab and parallel computing toolbox(for faster computational purposes), several models can be trained and tested in one go in App itself. Also there is hyperparameter tuning available for each family of ML models called as Optimizable Models for example: Optimizable Tree, optimizable ensemble and many more. First I start with one family of ML model by selecting all models of each family and after training testing process when i come to know about each models' performance under one family, then I proceed with hyperparameter tuning(by selecting optimizable ML model) with an objective to minimize RMSE.
 
 Let me illustrate this with an example:
-On training and testing several models in regression Learner app, i get to sort these models in ascending order of RMSE(test).
+On training and testing several models in regression Learner app, I get to sort these models in ascending order of RMSE(test).
 from those models i pick few models with best rmse and then tune their hyperparamters like i had done for GPR process.
 
 <br>
