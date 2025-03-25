@@ -203,11 +203,11 @@ On training and testing several models in regression Learner app, i get to sort 
 from those models i pick few models with best rmse and then tune their hyperparamters like i had done for GPR process.
 
 <br>
-<img src= "ML_models/regLearner.png" width="500"> 
+<img src= "ML_models/regLearner.png" width="800"> 
 
 <br>
 
-<img src="ML_models/gpr_best_rmse_ML.jpg" width="400">
+<img src="ML_models/gpr_best_rmse_ML.jpg" width="600">
       
 
 
