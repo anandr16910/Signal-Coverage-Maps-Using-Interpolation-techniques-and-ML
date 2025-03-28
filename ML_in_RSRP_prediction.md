@@ -205,13 +205,22 @@ On training and testing several models in regressionLearner app, I get to sort t
 from those models I pick few models with best rmse and then tune their hyperparameters for instance I had done for Gaussian Process Regression process.
 
 <br>
-<img src= "ML_models/regLearner.png" width="800">   
-!Fig *Comparison of all Models in terms of RMSE(dBm) present in RegressionLearner App*
+
+
+<div align="center">
+  <img src="ML_models/regLearner.png" width="800">
+  <br>
+  Fig.1 *Comparison of all Models in terms of RMSE(dBm) present in RegressionLearner App*
+</div>
+
 <br>
 
-Out of all ML models present in regressionLearner App we
-<img src="ML_models/gpr_best_rmse_ML.jpg" width="600">  
-!Fig *Guassian Process Regression*   
+<div align="center">
+  <img src="ML_models/gpr_best_rmse_ML.jpg" width="600">
+  <br>
+  Fig.2 *Guassian Process Regression*
+</div>
+  
 
 ## Measurements:
 
