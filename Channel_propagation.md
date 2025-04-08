@@ -16,7 +16,7 @@ Here I tried to use dual slope path loss model having near and far effect.
 
 
 <div align="center">
-  <img src="channel_propagation/dual_slope_log_dist_pm" width="600">
+  <img src="channel_propagation/dual_slope_log_dist_pm.jpg" width="600">
   <br>
   Fig.1 *Predict RSRP with optimized dual slope model for various d0 (in metres) *
 </div>
