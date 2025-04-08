@@ -10,6 +10,22 @@ Please refer this code [log distance propagation model](s3_ldpl.m)
 |MSE: | 113.4662 |
 |RMSE: | 10.6521 |
 
+# optimized lod distance propagation model:
+
+Here I tried to use dual slope path loss model having near and far effect.  
+
+key observations:
+
+Optimized Near Path Loss Exponent (n1):    2.2864  
+
+Optimized Far Path Loss Exponent (n2):     2.481  
+
+Optimized Breakpoint Distance (db):      90  
+
+Reduced RMSE with Dual-Slope Model:      10.1934  
+
+
+
 ## other models:
 <br>
 
