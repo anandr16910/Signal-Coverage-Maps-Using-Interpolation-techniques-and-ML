@@ -21,7 +21,10 @@ Here I tried to use dual slope path loss model having near and far effect.
   Fig.1 *Predict RSRP with optimized dual slope model for various d0 (in metres) *
 </div>
 
-Best RMSE was obtained by heuristic analysis using upper and lower bounds. Also for better computation therby maintaining optimum RMSE $lsqcurvefit$ was used
+
+
+Best RMSE was obtained by heuristic analysis using upper and lower bounds. Also for better computation thereby maintaining optimum RMSE $lsqcurvefit$ was used.
+
 
 key observations:
 
