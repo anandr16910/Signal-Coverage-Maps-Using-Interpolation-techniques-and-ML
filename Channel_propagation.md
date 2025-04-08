@@ -10,9 +10,18 @@ Please refer this code [log distance propagation model](s3_ldpl.m)
 |MSE: | 113.4662 |
 |RMSE: | 10.6521 |
 
-# optimized lod distance propagation model:
+# optimized log distance propagation model:
 
-Here I tried to use dual slope path loss model having near and far effect.  
+Here I tried to use dual slope path loss model having near and far effect.       
+
+
+<div align="center">
+  <img src="channel_propagation/dual_slope_log_dist_pm" width="600">
+  <br>
+  Fig.1 *Predict RSRP with optimized dual slope model for various d0 (in metres) *
+</div>
+
+Best RMSE was obtained by heuristic analysis using upper and lower bounds. Also for better computation therby maintaining optimum RMSE $lsqcurvefit$ was used
 
 key observations:
 
@@ -22,7 +31,8 @@ Optimized Far Path Loss Exponent (n2):     2.481
 
 Optimized Breakpoint Distance (db):      90  
 
-Reduced RMSE with Dual-Slope Model:      10.1934  
+Reduced RMSE with Dual-Slope Model:      10.1934  dBm
+
 
 
 
