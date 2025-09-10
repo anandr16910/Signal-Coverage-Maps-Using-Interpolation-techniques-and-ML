@@ -22,7 +22,7 @@ Scatter plots compare actual RSRP values versus predicted RSRP values for each m
 Random forest performs better than other three ML models. Reason being more number of decision trees are used in random forest. This model can be configured to match optimum error while retaining performance. Neural networks on other hand perform better but can be improved by increasing more number of hidden layers.
 
 Below graphs illustrate error histogram and number of epochs required for obtaining minimum MSE.
-hyperparamters used for fine tuning in random forests is number of decision trees.
+hyperparameters used for fine tuning in random forests is number of decision trees.
 
 <img src="ML_models/nn_training_state.jpg" width="300">
 	•	First Plot (Gradient vs. Epochs)
@@ -142,7 +142,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 ## Measurements: ##
 
-| Algorithmn  | MAE | RMSE  |
+| Algorithm | MAE | RMSE  |
 |----|----|----|
 | Linear Regression  |   9.9985 |   12.394|
 | Random Forest  |    2.8281   | 3.8075 |
