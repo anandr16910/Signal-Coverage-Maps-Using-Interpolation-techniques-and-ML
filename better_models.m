@@ -96,12 +96,7 @@ rmse_knn_cv = zeros(cv.NumTestSets,1);
 
 for i=1:cv.NumTestSets
 
-%mdl_knn = fitcknn(X(trainIdx,:), Y(trainIdx,:), 'NumNeighbors', 5,'Distance','euclidean');
-%mdl_knn = fitrknn(X(trainIdx,:), Y(trainIdx), 'NumNeighbors',5,'Distance','euclidean');
-%idx = knnsearch(X(trainIdx,:), Y(trainIdx), 'NumNeighbors',5, 'Distance', 'euclidean');
-% Predict RSRP
-%Y_pred_knn = predict(mdl_knn, X(testIdx,:));
-%Y_pred_knn = mean(Y(idx), 2);
+
 % Compute RMSE
 K = 5;
 % Standardize
@@ -116,7 +111,7 @@ XteZ = (X(testIdx,:)  - mu)./sig;
 W = 1 ./ (D + 1e-9);
 W = W ./ sum(W,2);
 YY = Y(trainIdx);
-Y_pred_knn = sum(W .* YY(idx), 2); % if this line errors, split: YY = Y(trainIdx); Y_pred_knn = sum(W .* YY(idx), 2);
+Y_pred_knn = sum(W .* YY(idx), 2); 
 
 rmse_knn = sqrt(mean((Y(testIdx) - Y_pred_knn).^2));
 
