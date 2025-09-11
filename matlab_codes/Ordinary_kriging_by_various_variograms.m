@@ -79,8 +79,7 @@ rsrp_neighbors = rsrp_values(idx);
 
 
 m = size(grid_points, 1);
-%predicted_values = zeros(m, 1);
-%predicted_rsrp = nan(size(grid_points, 1), 1);
+
 
 parpool; % Start parallel pool (if not already started)
 num_points = numel(Xq);  % Number of grid points
@@ -221,18 +220,6 @@ end
 function gamma_fit = exponential_variogram(bins, nugget, range, sill)
     gamma_fit = nugget + sill * (1 - exp(-bins / range));
 end
-%% function: spherical variogram model
-function gamma_fit = spherical_variogram(bins,nugget,range,sill)
-    gamma_fit = zeros(size(bins)); % Initialize output
-
-    % Apply spherical model conditionally
-    inside_range = bins <= range;
-    gamma_fit(inside_range) = nugget + sill * (1.5 * (bins(inside_range) / range) - 0.5 * (bins(inside_range) / range).^3);
-    
-    % For bins > range, set to sill
-    gamma_fit(~inside_range) = nugget + sill;
-end
-
 
 %% 
 
