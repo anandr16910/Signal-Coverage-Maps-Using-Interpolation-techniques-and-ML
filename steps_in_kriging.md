@@ -184,19 +184,19 @@ end
 <br>
 
 
-<img src="variogram_comparison.jpg" width="300" height="300">
+<img src="Kriging method/variogram_comparison.jpg" width="500" height="500">
 <br>
 optimized model by combining exponential gaussian and spherical model for some lag distance upto 150.
 
 
-<img src="fitted_variogram.jpg" width="300" height="300">
+<img src="Kriging method/fitted_variogram.jpg" width="500" height="500">
 fits well.
 
 refer [Comparison of variograms code](matlab_codes/various_variograms.m)
 
 <br>
 
-<img src="okd_improved.jpg" width="400" height="300">
+<img src="Kriging method/okd_improved.jpg" width="400" height="300">
 
 
 refer [Kriging_interpolation code](matlab_codes/Kriging_interpolation_coverage_map.m)
