@@ -118,25 +118,7 @@ parfor i = 1:size(grid_points, 1)
     weights = cov_matrix \ gamma;
     kriged_values(i) = weights(1:end-1)' * rsrp_values;
 end
-%for i = 1:num_points
-    % Distance between grid point and known points
-    %d_grid_to_points = sqrt(sum((spatial_points - grid_points(i, :)).^2, 2));
-    % d_grid_to_points = pdist2(grid_points(i, :), spatial_points); % Use pdist2 for pairwise distances
-    % % Variogram values for these distances
-    % gamma = variogram_model(d_grid_to_points);
-    % 
-    % % Create Kriging system
-    % %distance_matrix = sqrt(sum((spatial_points - spatial_points').^2, 3));
-    % distance_matrix = pdist2(spatial_points, spatial_points); % Pairwise distance matrix
-    % 
-    % gamma = [gamma(:); 1];
-    % 
-    % % Solve Kriging system
-    % weights = cov_matrix \ gamma;
-    % 
-    % % Compute Kriged value
-    %kriged_values(i) = weights(1:end-1)' * rsrp_values;
-%end
+
 
 % Reshape the Kriged values into grid format
 kriged_rsrp_grid = reshape(kriged_values, size(lat_mesh));
