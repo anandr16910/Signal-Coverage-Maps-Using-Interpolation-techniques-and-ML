@@ -17,6 +17,8 @@ Scatter plots compare actual RSRP values versus predicted RSRP values for each m
 <img src="ML_models/ML_models_comparison.jpg" width="500"> 
 <img src="ML_models/ML_models_error_comparison.jpg" width="500">
 
+refer [plots and error comparison of ML models code](matlab_codes/s1_geospatial_ML.m)
+
 # Performance
 
 Random forest performs better than other three ML models. Reason being more number of decision trees are used in random forest. This model can be configured to match optimum error while retaining performance. Neural networks on other hand perform better but can be improved by increasing more number of hidden layers.
