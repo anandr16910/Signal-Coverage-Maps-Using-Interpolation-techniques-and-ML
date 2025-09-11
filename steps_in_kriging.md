@@ -186,6 +186,8 @@ optimized model by combining exponential gaussian and spherical model for some l
 <img src="fitted_variogram.jpg" width="300" height="300">
 fits well.
 
+refer [Comparison of variograms](matlab_codes/various_variograms.m)
+
 <br>
 
 <img src="okd_improved.jpg" width="400" height="300">
