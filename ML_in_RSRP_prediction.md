@@ -184,7 +184,7 @@ Using Cvpartition(cross validation) with KFold = 9 and for better computation th
 below:
 
 
-<img src="ML_models/better_ML_models.jpg" width="400">   
+<img src="ML_models/ML_models_rmse.jpg" width="400">   
 
 |Model   |          RMSE |
 |----|-----|
