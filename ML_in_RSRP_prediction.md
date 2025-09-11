@@ -110,6 +110,7 @@ In MATLAB, the default training function for neural networks is Levenberg-Marqua
   - Handles small datasets well
     - Works well for moderate-sized datasets because it efficiently finds the best weights using second-order derivatives.
 
+refer [ML model codes after fine tuning](matlab_codes/ml_fine_tuning.m)
 
 <img src="nn_default_LM\neural architecture.png" width="300" height="300">
 architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural network architecture.
