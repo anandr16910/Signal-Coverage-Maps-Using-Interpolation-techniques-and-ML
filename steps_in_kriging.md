@@ -193,7 +193,7 @@ refer [Comparison of variograms code](matlab_codes/various_variograms.m)
 <img src="okd_improved.jpg" width="400" height="300">
 
 
-refer [Kriging_interpolation code](matlab_codes/various_variograms.m)
+refer [Kriging_interpolation code](matlab_codes/Kriging_interpolation_coverage_map.m)
 
 $$ RMSE =  \sqrt{\frac{1}{N} \sum_{i=1}^{N} (RSRP_{\text{true}, i} - RSRP_{\text{pred}, i})^2}   $$
 
