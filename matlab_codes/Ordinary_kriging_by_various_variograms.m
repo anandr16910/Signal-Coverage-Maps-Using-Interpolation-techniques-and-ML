@@ -1,6 +1,6 @@
 clc; clear; close all;
 data = readtable('cleaned2_network_data.xlsx');
-% bugs here and lengthy time 30 min or more %
+
 latitudes = str2double(data.Lattitude(:));
 longitudes = str2double(data.Longitude(:));
 
@@ -21,24 +21,21 @@ longitudes = y;
 [bins, gamma] = compute_variogram(x, y, rsrp_values, 50);
 %% optimized model 
 
-% Compute Experimental Variogram
-%[gamma, bins] = variogram(x, y, z, 0);  % Custom function or use variogramfit
+
 
 % Initial Guess for Parameters: [nugget, range, sill]
 init_params = [min(gamma), max(bins)/3, max(gamma)];  
 
 % Fit models using optimization
 exp_params = fminsearch(@(p) variogram_error(p, bins, gamma, 'exponential'), init_params);
-%sph_params = fminsearch(@(p) variogram_error(p, bins, gamma, 'spherical'), init_params);
-%gau_params = fminsearch(@(p) variogram_error(p, bins, gamma, 'gaussian'), init_params);
+
 
 % Compute Fitted Models
 gamma_exp = exponential_variogram(bins, exp_params(1), exp_params(2), exp_params(3));
-%gamma_sph = spherical_variogram(bins, sph_params(1), sph_params(2), sph_params(3));
-%gamma_gau = gaussian_variogram(bins, gau_params(1), gau_params(2), gau_params(3));
+
 
 % Choose model
-selected_model = 'exponential'; % Change to 'spherical' or 'gaussian'
+selected_model = 'exponential'; 
 switch selected_model
     case 'exponential'
          nugget = exp_params(1);
@@ -60,15 +57,12 @@ K = variogram_model(D);
 
 % Append the Lagrange multiplier to enforce unbiasedness:
 K_augmented = [K, ones(n,1); ones(1,n), 0];
-%K_augmented = [K, ones(n,1); ones(1,n), 0];
+
 K_augmented = K_augmented + eye(size(K_augmented)) * 1e-6;
 %% --- Step 4: Define a Grid for Interpolation ---
 % Set the grid resolution (adjust numGridPoints to balance resolution and computation)
-% numGridPoints = 100;
-% xGrid = linspace(min(x), max(x), numGridPoints);
-% yGrid = linspace(min(y), max(y), numGridPoints);
-% [Xq, Yq] = meshgrid(xGrid, yGrid);
-% grid_points = [Xq(:), Yq(:)];  % Each row is an interpolation location
+
+
 step_size = 20;  % Increase this from 10 or 1 to reduce computations
 [Xq, Yq] = meshgrid(min(x):step_size:max(x), min(y):step_size:max(y));
 
@@ -149,25 +143,14 @@ mae = mean(abs(rsrp_true - predicted_rsrp));
 fprintf('RMSE: %.2f dB\n', rmse);
 fprintf('MAE: %.2f dB\n', mae);
 %% --- Step 6: Reshape and Plot the Coverage Map ---
-% predicted_grid = reshape(predicted_values, size(Xq));
-% 
-% figure;
-% % Option 1: Using contourf for a smooth plot:
-% contourf(Xq, Yq, predicted_grid, 20, 'LineColor', 'none');
-% colorbar;
-% title('Ordinary Kriging RSRP Coverage Map (Exponential Model)');
-% xlabel('X Coordinate'); ylabel('Y Coordinate');
-    case 'spherical'
-        variogram_model = @(h) (h <= range) .* (nugget + sill * (1.5 * (h / range) - 0.5 * (h / range).^3)) + (h > range) * sill;
-    case 'gaussian'
-        variogram_model = @(h) nugget + sill * (1 - exp(-(h / range).^2));
+
+    
 end
 % Plot Comparison
 figure; hold on;
 scatter(bins, gamma, 'bo', 'DisplayName', 'Experimental Variogram');
 plot(bins, gamma_exp, 'r-', 'LineWidth', 2, 'DisplayName', 'Exponential Model');
-plot(bins, gamma_sph, 'g-', 'LineWidth', 2, 'DisplayName', 'Spherical Model');
-plot(bins, gamma_gau, 'b-', 'LineWidth', 2, 'DisplayName', 'Gaussian Model');
+
 
 
 
@@ -181,16 +164,13 @@ sill = max(gamma);       % Initial guess for sill
 nugget = min(gamma);     % Initial guess for nugget
 
 expo_gamma = exponential_variogram(bins, nugget, range, sill);
-sph_gamma = spherical_variogram(bins,nugget,range,sill);
-gaussian_gamma = gaussian_variogram(bins,nugget,range,sill);
+
 % Plot results
 figure;
 scatter(bins, gamma, 'bo', 'DisplayName', 'Experimental Variogram'); hold on;
 plot(bins, expo_gamma, 'r-', 'LineWidth', 2, 'DisplayName', 'Exponential Model');
-hold on;
-plot(bins, sph_gamma, 'g-', 'LineWidth', 2, 'DisplayName', 'Spherical Model');
-hold on;
-plot(bins, gaussian_gamma, 'b-', 'LineWidth', 2, 'DisplayName', 'Gaussian Model');
+
+
 xlabel('Lag Distance');
 ylabel('Semivariance');
 legend;
@@ -253,23 +233,6 @@ function gamma_fit = spherical_variogram(bins,nugget,range,sill)
     gamma_fit(~inside_range) = nugget + sill;
 end
 
-%% function: gaussian model:
-function gamma_fit = gaussian_variogram(bins,nugget,sill,range)
-    gamma_fit = nugget + sill * (1 - exp(-(bins / range).^2));
-end 
-%% function: variogram error:
-function error_val = variogram_error(params, bins, gamma_exp, model_type)
-    nugget = params(1); range = params(2); sill = params(3);
-    switch model_type
-        case 'exponential'
-            gamma_fit = exponential_variogram(bins, nugget, range, sill);
-        case 'spherical'
-            gamma_fit = spherical_variogram(bins, nugget, range, sill);
-        case 'gaussian'
-            gamma_fit = gaussian_variogram(bins, nugget, range, sill);
-    end
-    error_val = sum((gamma_exp - gamma_fit).^2); % Least squares error
-end
 
 %% 
 
