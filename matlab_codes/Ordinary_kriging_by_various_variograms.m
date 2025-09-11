@@ -1,5 +1,6 @@
 clc; clear; close all;
 data = readtable('cleaned2_network_data.xlsx');
+% bugs here and lengthy time 30 min or more %
 latitudes = str2double(data.Lattitude(:));
 longitudes = str2double(data.Longitude(:));
 
