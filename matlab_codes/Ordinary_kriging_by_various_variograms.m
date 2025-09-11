@@ -173,7 +173,7 @@ plot(bins, expo_gamma, 'r-', 'LineWidth', 2, 'DisplayName', 'Exponential Model')
 xlabel('Lag Distance');
 ylabel('Semivariance');
 legend;
-title('Exponential sph guassian Variogram Fit');
+title('Exponential Variogram Fit');
 grid on;
 hold off;
 
