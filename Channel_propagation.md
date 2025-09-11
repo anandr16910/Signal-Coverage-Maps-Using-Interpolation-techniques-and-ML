@@ -1,6 +1,6 @@
 # Log Distance Propagation model:
 
-Please refer this code [log distance propagation model](channel_propagation/s3_ldpl.m)
+Please refer this code [log distance propagation model](channel_propagation/s3_Idpl.m)
 
 
 ![image](https://github.com/user-attachments/assets/866c1521-42e1-41f1-b08b-d3770f7653af) 
