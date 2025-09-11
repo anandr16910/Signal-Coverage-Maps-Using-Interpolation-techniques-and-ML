@@ -192,7 +192,7 @@ below:
  |   Random Forest(TreeBagger) |   3.3919|
    | Support Vector Regression               |   5.5004 |
    | Gradient Boosting |   4.8598 |
-   |  KNN              |   19.363  |
+   |  KNN              |   3.863  |
    | GLM               |  12.817  |
 
 refer [Ml models code](matlab_codes/better_models.m)
