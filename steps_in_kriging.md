@@ -5,9 +5,9 @@ Steps:
 
 2. Generate Coverage Maps
 
-<img src="Kriging method/baseline_coverage_map.jpg" width="300" height="300">
+<img src="Kriging method/baseline_coverage_map.jpg" width="500" height="500">
 
-<img src="Kriging method/kriging_coverage_map.jpg" width="300" height="300">
+<img src="Kriging method/kriging_coverage_map.jpg" width="500" height="500">
 
 
 2.1 Baseline Map (Geospatial Interpolation)
