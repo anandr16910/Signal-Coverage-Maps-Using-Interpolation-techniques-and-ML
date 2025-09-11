@@ -176,7 +176,7 @@ here I tune:
    
 <img src="ML_models/RandomForestOptimization.jpg" width="500">
 
-refer [optimized random forest code](random_forest_leafsize.m) 
+refer [optimized random forest code](matlab_codes/random_forest_leafsize.m) 
 
 
 ## After some more tuning and exploring other ML models:
@@ -195,7 +195,7 @@ below:
    |  KNN              |   19.363  |
    | GLM               |  12.817  |
 
-refer [Ml models code](better_models.m)
+refer [Ml models code](matlab_codes/better_models.m)
 observation: Minimum RMSE corresponding to Random forest was obtained when the i tried with TreeBagger model (where num of trees is set to 75). TreeBagger although with fewer hyperparameters to tune is superior to FitEnsemble method. 
 
 
