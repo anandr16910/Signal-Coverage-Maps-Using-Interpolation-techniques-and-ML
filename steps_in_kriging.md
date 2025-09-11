@@ -196,7 +196,7 @@ refer [Comparison of variograms code](matlab_codes/various_variograms.m)
 
 <br>
 
-<img src="Kriging method/okd_improved.jpg" width="400" height="300">
+<img src="Kriging method/okd_improved.jpg" width="500" height="500">
 
 
 refer [Kriging_interpolation code](matlab_codes/Kriging_interpolation_coverage_map.m)
