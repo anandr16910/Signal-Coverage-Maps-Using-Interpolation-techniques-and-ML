@@ -186,11 +186,14 @@ optimized model by combining exponential gaussian and spherical model for some l
 <img src="fitted_variogram.jpg" width="300" height="300">
 fits well.
 
-refer [Comparison of variograms](matlab_codes/various_variograms.m)
+refer [Comparison of variograms code](matlab_codes/various_variograms.m)
 
 <br>
 
 <img src="okd_improved.jpg" width="400" height="300">
+
+
+refer [Kriging_interpolation code](matlab_codes/various_variograms.m)
 
 $$ RMSE =  \sqrt{\frac{1}{N} \sum_{i=1}^{N} (RSRP_{\text{true}, i} - RSRP_{\text{pred}, i})^2}   $$
 
