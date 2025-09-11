@@ -119,7 +119,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 |Before Fine Tuning                        |                    After Fine Tuning           |
 |:---------------------------------------:|:-----------------------------------------------:|
- <img src="https://github.com/user-attachments/assets/77866657-0c59-482e-8b49-019d5b79c96b" width = "300" height = "300">|<img src="nn_default_LM\nn_training_perf.jpg" width="300" height="300">
+ <img src="https://github.com/user-attachments/assets/77866657-0c59-482e-8b49-019d5b79c96b" width = "400" height = "400">|<img src="nn_default_LM\nn_training_perf.jpg" width="400" height="400">
 
 
 
