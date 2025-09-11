@@ -77,7 +77,7 @@ X = X;  % Feature matrix
 Y = rsrp; % Target values
 
 % Define neural network
-hiddenLayerSize = [100 75 30]; % Two hidden layers (adjustable)
+hiddenLayerSize = [50 25]; % Two hidden layers (adjustable)
 net = fitnet(hiddenLayerSize, 'trainlm'); % Using Levenberg-Marquardt (LM)
 
 % Use ReLU activation function
