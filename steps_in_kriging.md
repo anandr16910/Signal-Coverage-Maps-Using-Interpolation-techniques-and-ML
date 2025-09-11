@@ -136,10 +136,16 @@ problem 3: NaN values in lambda
 Fix: Use Approximate Nearest Neighbors Instead of Full Matrix
 
 1️Increase grid step size (step_size = 50 instead of 1 or 10)
-2️ Use pdist2() for fast distance calculations (avoid loops)
-3️ Use k-nearest neighbors (knnsearch()) to reduce problem size
-4️ Enable parallel computing (parpool, parfor)
+    
+2️ Use pdist2() for fast distance calculations (avoid loops)  
+   
+3️ Use k-nearest neighbors (knnsearch()) to reduce problem size     
+
+4️ Enable parallel computing (parpool, parfor)  
+   
 5️ Use Cholesky decomposition instead of matrix inversion
+
+
 
 Optimized Code snippets:
 ```matlab
