@@ -188,8 +188,8 @@ below:
 
 |Model   |          RMSE |
 |----|-----|
- |Neural Network   |    3.1425 |
- |   Random Forest(TreeBagger) |   2.3919|
+ |Neural Network   |    4.1425 |
+ |   Random Forest(TreeBagger) |   3.3919|
    | Support Vector Regression               |   5.5004 |
    | Gradient Boosting |   4.8598 |
    |  KNN              |   19.363  |
