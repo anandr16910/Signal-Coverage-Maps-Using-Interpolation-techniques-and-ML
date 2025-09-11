@@ -26,7 +26,7 @@ Random forest performs better than other three ML models. Reason being more numb
 Below graphs illustrate error histogram and number of epochs required for obtaining minimum MSE.
 hyperparameters used for fine tuning in random forests is number of decision trees.
 
-<img src="ML_models/nn_training_state.jpg" width="300">
+<img src="ML_models/nn_training_state.jpg" width="400">
 	•	First Plot (Gradient vs. Epochs)
 	•	The gradient is the rate of change of the error function.
 	•	A decreasing gradient shows the model is converging.
@@ -37,7 +37,7 @@ hyperparameters used for fine tuning in random forests is number of decision tre
 	•	If failures reach the validation threshold (here, 6), training stops.
 
 
-<img src="ML_models/nn_error_histogram.jpg" width="300">
+<img src="ML_models/nn_error_histogram.jpg" width="400">
 	•	The plot is divided into:
 	•	Training data errors (Blue)
 	•	Validation data errors (Green)
@@ -45,14 +45,14 @@ hyperparameters used for fine tuning in random forests is number of decision tre
 	•	The orange vertical line represents zero error, meaning perfect predictions.
 	•	The histogram shows that most errors are centered around zero, indicating a well-trained network, though some errors are significantly high.  
  
-<img src="ML_models/nn_best_validation_performance.jpg" width="300">
+<img src="ML_models/nn_best_validation_performance.jpg" width="400">
 Here, The plot shows how the MSE reduces over time.
 	•	The training stopped at epoch 166 because of validation performance criteria.
 	•	The best validation performance occurred at epoch 160 with an MSE of 30.9109.
 	•	This means after this point, further training did not improve validation performance, and early stopping was applied.
   
  
-<img src="ML_models/nn_training and validation.jpg" width="300">
+<img src="ML_models/nn_training and validation.jpg" width="400">
 
  This image contains four scatter plots, showing the relationship between the target (actual RSRP values) and output (predicted values from the neural network) for different datasets.
 
@@ -112,10 +112,10 @@ In MATLAB, the default training function for neural networks is Levenberg-Marqua
 
 refer [ML model codes after fine tuning](matlab_codes/ml_fine_tuning.m)
 
-<img src="nn_default_LM\neural architecture.png" width="300" height="300">
+<img src="nn_default_LM\neural architecture.png" width="400" height="400">
 architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural network architecture.
 
-<img src="nn_default_LM\models_comparison.jpg" width="300" height="300">
+<img src="nn_default_LM\models_comparison.jpg" width="400" height="400">
 
 |Before Fine Tuning                        |                    After Fine Tuning           |
 |:---------------------------------------:|:-----------------------------------------------:|
@@ -124,7 +124,7 @@ architeture with 50 and 25 neurons in hidden layer. this is fine tune Neural net
 
 
 
-<img src="nn_default_LM\regression_after_fine_tuning.jpg" width="300" height="300">
+<img src="nn_default_LM\regression_after_fine_tuning.jpg" width="400" height="400">
   
 * Correlation Coefficient (R values)
   - Training: R = 0.93373
