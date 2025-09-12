@@ -28,13 +28,10 @@ Best RMSE was obtained by heuristic analysis using upper and lower bounds. Also 
 
 key observations:
 
-
-|Optimized Near Path Loss Exponent (n1):  |  2.2864 | 
 |----|----|
+|Optimized Near Path Loss Exponent (n1):  |  2.2864 | 
 |Optimized Far Path Loss Exponent (n2):   |  2.481  |
-
 |Optimized Breakpoint Distance (db):     | 90    |
-
 |Reduced RMSE with Dual-Slope Model:    |  10.1934  dBm |
 
 
