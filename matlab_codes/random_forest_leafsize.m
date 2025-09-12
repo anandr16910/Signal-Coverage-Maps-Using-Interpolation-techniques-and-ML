@@ -79,5 +79,4 @@ disp(best_params);
 fprintf('Best RMSE: %.4f dB\n', best_rmse);
 
 %------%
-title('Effect of MinLeafSize on RMSE');
-grid on;
+
