@@ -28,37 +28,17 @@ Best RMSE was obtained by heuristic analysis using upper and lower bounds. Also 
 
 key observations:
 
-Optimized Near Path Loss Exponent (n1):    2.2864  
+|-----------|----|
+|Optimized Near Path Loss Exponent (n1):  |  2.2864 | 
 
-Optimized Far Path Loss Exponent (n2):     2.481  
+|Optimized Far Path Loss Exponent (n2):   |  2.481  |
 
-Optimized Breakpoint Distance (db):      90  
+|Optimized Breakpoint Distance (db):     | 90    |
 
-Reduced RMSE with Dual-Slope Model:      10.1934  dBm
-
-
-
-
-## other models:
-<br>
-
-1. Free Space
-
-![image](https://github.com/user-attachments/assets/1bdf9454-55cc-411e-be4a-9ed805a3e00e)
-
-Theoretical RSS Range: [-90.425470, -67.832862] dBm
-
-Measured RSRP Range: [-137.270000, -58.270000] dBm
-<br>
+|Reduced RMSE with Dual-Slope Model:    |  10.1934  dBm |
 
 
-2. Longley Rice:
 
-![image](https://github.com/user-attachments/assets/5d638c5d-83c4-4a16-9aef-58840b8043d4)
-
-Theoretical RSRP Range: [-90.412107, -57.661302] dBm
-
-Measured RSRP Range: [-137.270000, -58.270000] dBm
 
 
 
