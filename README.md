@@ -20,5 +20,8 @@ Machine learning models like random forest and deep neural networks work well.
 
 ## Inferences
 
-RMSE is around 3 to 6 dbm by using 
+RMSE is around 3 to 6 dbm by using various machine learning models which is optimum for building signal coverage maps for RSRP prediction.
+Other techniques like channel propagation methods which use channel modelling offer around 10 to 11 dBm RMSE in predicting RSRP, also with Kriging technique but RMSE obtained is quite high for RSRP prediction.
+ML techniques are useful with decent RMSE as for this project dataset size is somewhat large.
+Other techniques work well for small and moderate dataset sizes.
 
