@@ -30,7 +30,6 @@ key observations:
 
 
 |Optimized Near Path Loss Exponent (n1):  | 2.2864 |
-|---|---|
 |Optimized Far Path Loss Exponent (n2):   |  2.481  |
 | | |
 |Optimized Breakpoint Distance (db):      | 90      |
