@@ -78,22 +78,6 @@ disp('Best Hyperparameters:');
 disp(best_params);
 fprintf('Best RMSE: %.4f dB\n', best_rmse);
 
-% Train Final Model Using Best Found Parameters
-final_tree = templateTree('MinLeafSize', best_params.MinLeafSize, 'MaxNumSplits', best_params.MaxNumSplits);
-final_model = fitrensemble(X, Y, 'Method', 'Bag', ...
-                           'NumLearningCycles', best_params.NumTrees, ...
-                           'Learners', final_tree);
-
-% Predict on Full Dataset
-Y_pred_final = predict(final_model, X);
-
-% Compute RMSE on Full Dataset
-final_rmse = sqrt(mean((Y - Y_pred_final).^2));
-fprintf('Final Model RMSE: %.4f dB\n', final_rmse);
-
-figure;
-plot(results(:,2), results(:,4), '-o', 'LineWidth', 2);
-xlabel('MinLeafSize');
-ylabel('RMSE (dB)');
+%------%
 title('Effect of MinLeafSize on RMSE');
 grid on;
