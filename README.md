@@ -18,4 +18,7 @@ Machine learning models like random forest and deep neural networks work well.
 - [Kriging and Ordinary Kriging method](steps_in_kriging.md)
 - [ML in RSRP prediction](ML_in_RSRP_prediction.md)
 
+## Inferences
+
+RMSE is around 3 to 6 dbm by using 
 
