@@ -32,7 +32,7 @@ rmse_values(1) = sqrt(mean((y_test - y_pred_lin).^2));
 
 % 2. Random Forest (TreeBagger)
 %rfModel = TreeBagger(50, X_train, y_train, 'OOBPredictorImportance', 'on');
-rfModel = TreeBagger(1800, X_train, y_train, 'Method', 'regression', ...
+rfModel = TreeBagger(100, X_train, y_train, 'Method', 'regression', ...
     'OOBPrediction', 'on', 'OOBPredictorImportance', 'on');
 y_pred_rf = predict(rfModel, X_test);
 %y_pred_rf  = Y_pred_rf;
@@ -48,8 +48,7 @@ rmse_values(3) = sqrt(mean((y_test - y_pred_svm).^2));
 
 % 4. Neural Network (Feedforward)
 net = feedforwardnet(100,'trainlm'); % 10 hidden neurons
-
-
+%
 net = train(net, X_train', y_train'); % Train model
 y_pred_nn = net(X_test'); % Predict
 y_pred_nn = y_pred_nn'; % Convert back to column vector
@@ -91,13 +90,13 @@ net.divideParam.valRatio = 0.15;  % 15% for validation
 net.divideParam.testRatio = 0.15; % 15% for testing
 
 % Set training options
-net.trainParam.epochs = 200;        % Maximum epochs
+net.trainParam.epochs = 100;        % Maximum epochs
 net.trainParam.lr = 0.01;           % Learning rate
 net.trainParam.min_grad = 1e-6;     % Minimum gradient
 net.trainParam.max_fail = 15;       % Early stopping
 
 % Regularization (L2 Weight Decay)
-net.performParam.regularization = 0.001; % L2 regularization strength
+net.performParam.regularization = 0.01; % L2 regularization strength
 
 % Train the network
 [net, tr] = train(net, X', Y');
