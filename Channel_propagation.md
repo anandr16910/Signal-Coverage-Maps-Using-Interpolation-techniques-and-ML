@@ -34,7 +34,7 @@ key observations:
 |----|----|
 |Optimized Breakpoint Distance (db):      | 90      |
 |Reduced RMSE with Dual-Slope Model:      |  10.1934  dBm |
-|-----|-----|
+
 
 
 
