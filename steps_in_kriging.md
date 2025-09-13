@@ -207,6 +207,11 @@ minimum RMSE is found out corresponding to exponetial optimized model.
 
 Optimized variograms:
 
+| Variogram Model | RMSE (dBm) |
+|-----------------|------------|
+| Exponential     | 62.6543    |
+| Spherical   | 62.3296|
+| Gaussian        | 62.3787    |
 
 
 
