@@ -38,6 +38,16 @@ gamma_exp = exponential_variogram(bins, exp_params(1), exp_params(2), exp_params
 gamma_sph = spherical_variogram(bins, sph_params(1), sph_params(2), sph_params(3));
 gamma_gau = gaussian_variogram(bins, gau_params(1), gau_params(2), gau_params(3));
 
+% display RMSE resuts for each optimized variograms
+disp(" optimized fitted models");
+
+E_exp = rmse(gamma_exp, gamma);
+E_sph = rmse(gamma_sph, gamma);
+E_gau = rmse(gamma_gau, gamma);
+disp(['RMSE for Exponential fitted Model: ', num2str(E_exp)]);
+disp(['RMSE for Spherical fitted Model: ', num2str(E_sph)]);
+disp(['RMSE for Gaussian fitted Model: ', num2str(E_gau)]);
+
 % Plot Comparison
 figure; hold on;
 scatter(bins, gamma, 'bo', 'DisplayName', 'Experimental Variogram');
@@ -57,6 +67,16 @@ nugget = min(gamma);     % Initial guess for nugget
 fitted_gamma = exponential_variogram(bins, nugget, range, sill);
 sph_gamma = spherical_variogram(bins,nugget,range,sill);
 gaussian_gamma = gaussian_variogram(bins,nugget,range,sill);
+
+% RMSE of each variograms
+disp(" various variogram rmse ");
+E_exp0 = rmse(fitted_gamma, gamma);
+E_sph0 = rmse(sph_gamma, gamma);
+E_gau0 = rmse(gaussian_gamma, gamma);
+
+disp(['RMSE for Exponential model: ', num2str(E_exp0)]);
+disp(['RMSE for Spherical model: ', num2str(E_sph0)]);
+disp(['RMSE for Gaussian model: ', num2str(E_gau0)]);
 % Plot results
 figure;
 scatter(bins, gamma, 'bo', 'DisplayName', 'Experimental Variogram'); hold on;
