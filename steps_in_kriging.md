@@ -208,4 +208,4 @@ $$ RMSE =  \sqrt{\frac{1}{N} \sum_{i=1}^{N} (RSRP_{\text{true}, i} - RSRP_{\text
 |OKD with exponential variogram configuration: |16.29 |
 
 
-
+refer [kriging method rmse calculation](matlab_codes/kriging_rmse.m)
