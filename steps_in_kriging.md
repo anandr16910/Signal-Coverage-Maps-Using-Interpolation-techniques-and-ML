@@ -214,6 +214,7 @@ Optimized variograms:
 | Gaussian        | 62.3787    |
 
 
+From above two tables kriging interpolation coverage map is obtained corresponding to optimised exponential variogram model whose RMSE was minimum among other variograms.
 
 <br>
 
