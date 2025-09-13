@@ -196,6 +196,19 @@ fits well.
 
 refer [Comparison of variograms code](matlab_codes/various_variograms.m)
 
+Now, after comparing RMSE of various variograms (exponential spherical and gaussian ) and also their optimized models,
+minimum RMSE is found out corresponding to exponetial optimized model.
+
+| Variograms:					|
+| RMSE(dBm for Exponential : | 104.5796 |
+| RMSE(dBm) for Spherical : | 118.9936 |
+| RMSE(dBm) for Gaussian : | 126.3165 |
+
+Optimized variograms:
+
+
+
+
 <br>
 
 <img src="Kriging method/okd_improved.jpg" width="500" height="500">
