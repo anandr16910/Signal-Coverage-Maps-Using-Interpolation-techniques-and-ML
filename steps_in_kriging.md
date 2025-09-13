@@ -209,8 +209,8 @@ Optimized variograms:
 
 | Variogram Model | RMSE (dBm) |
 |-----------------|------------|
-| Exponential     | 62.6543    |
-| Spherical   | 62.3296|
+| Exponential     | 62.343    |
+| Spherical   | 62.796|
 | Gaussian        | 62.3787    |
 
 
