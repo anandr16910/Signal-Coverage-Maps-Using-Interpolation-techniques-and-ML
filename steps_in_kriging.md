@@ -182,11 +182,13 @@ end
 
 # Simulations:
 <br>
-
+Each model has a different way of approximating spatial correlation over increasing lag distances. It looks like the spherical model (green) reaches the sill fastest, while the exponential model (red) increases more gradually.
 
 <img src="Kriging method/variogram_comparison.jpg" width="500" height="500">
 <br>
-optimized model by combining exponential gaussian and spherical model for some lag distance upto 150.
+
+
+Now I obtain optimized model by combining exponential gaussian and spherical model for some lag distance upto 150.
 
 
 <img src="Kriging method/fitted_variogram.jpg" width="500" height="500">
