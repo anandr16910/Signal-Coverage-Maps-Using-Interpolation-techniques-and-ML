@@ -198,6 +198,14 @@ below:
 refer [Ml models code](matlab_codes/better_models.m)
 observation: Minimum RMSE corresponding to Random forest was obtained when the i tried with TreeBagger model (where num of trees is set to 75). TreeBagger although with fewer hyperparameters to tune is superior to FitEnsemble method. 
 
+Below are geo-referenced plots corresponding to Neural networks and Random forest ML models:
+Neural Networks :
+
+<img src="ML_models/NN.jpg" width="600">  
+Random forest:
+
+<img src="ML_models/RF.jpg" width="600">  
+
 
 ## GUI based ML models:
 
