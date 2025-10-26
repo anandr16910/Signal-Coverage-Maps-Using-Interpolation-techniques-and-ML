@@ -238,7 +238,7 @@ from those models I pick few models with best rmse and then tune their hyperpara
 
 | configuration | RMSE (in dBm) |
 |--------|-------|
-| Gaussian Process Regression  | 2.9 |
+| Gaussian Process Regression  | 2.28 |
 | Squared Exponential | 4.1 |
 | Matern 5/2 | 3.544|
 | Rational Quadratic| 2.86|
