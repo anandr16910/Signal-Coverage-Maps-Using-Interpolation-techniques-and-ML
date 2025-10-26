@@ -236,15 +236,16 @@ from those models I pick few models with best rmse and then tune their hyperpara
 
 ## Measurements:
 
-| Gaussian Process Regression configuration | RMSE (in dBm) |
+| configuration | RMSE (in dBm) |
 |--------|-------|
+| Gaussian Process Regression  | 2.9 |
 | Squared Exponential | 4.1 |
 | Matern 5/2 | 3.544|
 | Rational Quadratic| 2.86|
 | Exponential | 2.49 |
 | Optimizable - isotropic exponential | 2.28|
 | Random Forest  TreeBagger | 2.39 |
-|                Ensemble(optimized) | 3.8 |
+| Ensemble(optimized) | 3.8 |
    
 From above table, it is evident that Optimizable GPR performs better than random forest(TreeBagger Model and Ensemble model).
 
