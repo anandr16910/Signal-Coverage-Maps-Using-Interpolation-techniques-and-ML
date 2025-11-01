@@ -251,7 +251,7 @@ From above table, it is evident that Optimizable GPR performs better than random
 
 Geoplots for optimized GPR where Basis function is set to constant or linear and Kernel function as ard squared exponential to yield optimum RMSE.
 
-<img src="ML_models/RF.jpg" width="600">  
+<img src="ML_models/GPR.jpg" width="600">  
 
 code execution is little longer: 30 -45 min as it involves computing inversion of co-variance matrices of order (n X n) where n is no. of training samples.
 
