@@ -256,6 +256,13 @@ Geoplots for optimized GPR where Basis function is set to constant or linear and
 code execution is little longer: 30 -45 min as it involves computing inversion of co-variance matrices of order (n X n) where n is no. of training samples.
 
 Refer [Geoplots code for GPR](matlab_codes/GPR.m) 
+
+Ensemble tree bagger geo plots from above GUI table:
+
+<img src="ML_models/testGUI_ensemble.jpg" width="600">  
+
+refer code [Geoplots code for Ensemble](matlab_codes/Ensemble_treeBagger.m
+)
       
 
 
