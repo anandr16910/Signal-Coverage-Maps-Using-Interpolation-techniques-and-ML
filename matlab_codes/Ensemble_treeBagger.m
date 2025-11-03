@@ -3,13 +3,11 @@
 close all;
 clear all;
 
-% Load data (Ensure 'cleaned2_network_data.xlsx' is in the MATLAB path)
+
 data = readtable("cleaned2_network_data.xlsx");
 
 % Extract and convert data columns
-% NOTE: Assuming your data columns are correctly named and contain numeric data,
-% str2double is used as in your original code to handle potential string-like
-% representations of numbers.
+
 lat  = str2double(data.Lattitude);
 lon  = str2double(data.Longitude);
 rsrp = str2double(data.RSRP_54_); % Response variable Y
@@ -101,7 +99,7 @@ xlabel('Longitude');
 ylabel('Latitude');
 
 
-% --- Part 4: Helper Function (Copied from your provided code) ---
+% --- Part 4: function generated from regressionlearnerApp  ---
 % This function trains the Regression Ensemble model (Random Forest)
 
 function [trainedModel, validationRMSE] = trainRegressionModel(trainingData, responseData)
