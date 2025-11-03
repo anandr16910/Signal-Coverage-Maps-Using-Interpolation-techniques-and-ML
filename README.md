@@ -17,6 +17,7 @@ Machine learning models like random forest and deep neural networks work well.
 - [Channel Propagation method](Channel_propagation.md)
 - [Kriging and Ordinary Kriging method](steps_in_kriging.md)
 - [ML in RSRP prediction](ML_in_RSRP_prediction.md)
+   - [end to end pipeline for RSRP prediction using various ML models code](matlab_codes/RSRP_prediction_using_ML.mlx)
 
 ## Inferences
 
