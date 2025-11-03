@@ -180,6 +180,20 @@ refer [optimized random forest code](matlab_codes/random_forest_leafsize.m)
 
 
 ## After some more tuning and exploring other ML models:
+
+I tried to compare ML models with cross validation and hold-out validation, below is the table to illustrate the differences between two techniques.
+
+Cross-Validation vs. Hold-Out Validation
+
+| Feature | K-Fold Cross-Validation | Hold-Out Validation |
+| :--- | :--- | :--- |
+| **Data Splitting** | Data is split into $K$ equal-sized folds. | Data is split once into **two** partitions: a **training set** (e.g., 70-80%) and a **test/hold-out set** (e.g., 20-30%). |
+| **Training & Testing** | The model is trained and tested **$K$ times** (once for each fold as the test set). | The model is trained and tested **only once**. |
+| **Data Usage** | **All data points** are used for both training and testing across the $K$ iterations. | The **test set is never used for training**. |
+| **Performance Metric**| An **average** of the $K$ performance scores (e.g., average RMSE) is used. This is a **robust and reliable** estimate. | A **single** performance score (e.g., one RMSE) is used. This estimate can be **highly variable** depending on the initial split. |
+| **Risk of Bias** | **Low**. The model is validated against many different subsets, providing an unbiased view of its generalization ability. | **High**. The result is dependent on the luck of the split. |
+| **Computational Cost**| **High**. Requires training and evaluating the model $K$ times. | **Low**. Requires training and evaluating the model only once. |
+
 Using Cvpartition(cross validation) with KFold = 9 and for better computation thanks to Matlab Parallel computing toolbox. Results of other ML models performances are summarized
 below:
 
@@ -250,6 +264,7 @@ from those models I pick few models with best rmse and then tune their hyperpara
 From above table, it is evident that Optimizable GPR performs better than random forest(TreeBagger Model and Ensemble model).
 
 Geoplots for optimized GPR where Basis function is set to constant or linear and Kernel function as ard squared exponential to yield optimum RMSE.
+RSRP difference(Predicted, true RSRP) from given dataset is obtained and plotted. These plots represent RSRP deviations from true RSRP. Yellow ones correspond to minimum error in RSRP and few blue one's correspond to maximum error in RSRP.
 
 <img src="ML_models/GPR.jpg" width="600">  
 
@@ -257,8 +272,10 @@ code execution is little longer: 30 -45 min as it involves computing inversion o
 
 Refer [Geoplots code for GPR](matlab_codes/GPR.m) 
 
+# Ensemble method from Regression Learner App:
+Next I move into Ensemble method from regression learner app as present in Matlab, here after simulation in this app, I click on "Generate function" to furthur obtain geo plots.
 Ensemble tree bagger geo plots from above GUI table:
-
+RSRP difference between predicted RSRP and true RSRP is obtained and plotted.
 <img src="ML_models/testGUI_ensemble.jpg" width="600">  
 
 refer code [Geoplots code for Ensemble](matlab_codes/Ensemble_treeBagger.m
