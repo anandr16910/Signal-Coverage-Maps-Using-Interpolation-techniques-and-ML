@@ -12,17 +12,19 @@ RSRP corresponding to given latitudes, longitudes from given dataset.
 
 # Description about the dataset
 
-The provided data, sourced from a delimited file named # **cleaned2_network_data.xlsx** - Sheet1.csv, contains typical metrics collected during mobile network performance measurements, such as a drive test or MDT logging session. The structure of the data includes the following fields: Lattitude, Longitude, Altitude, Speed, RSRP_54_, SINR_54_, and Grid.   
+The provided data, sourced from a delimited file named **cleaned2_network_data.xlsx** - Sheet1.csv, contains typical metrics collected during mobile network performance measurements, such as a drive test or MDT logging session. The structure of the data includes the following fields: Lattitude, Longitude, Altitude, Speed, RSRP_54_, SINR_54_, and Grid.   
 
 The geospatial columns—Lattitude and Longitude—provide the horizontal position of the measurement device. The data exhibits high spatial density within specific localized clusters (e.g., numerous points grouped around 49.4239X N, 7.753X E). This dense, path-specific sampling is highly advantageous for geostatistical techniques. 
 
-The provided data, sourced from a delimited file named cleaned2_network_data.xlsx - Sheet1.csv, contains typical metrics collected during mobile network performance measurements, such as a drive test or MDT logging session. The structure of the data includes the following fields: Lattitude, Longitude, Altitude, Speed, RSRP_54_, SINR_54_, and Grid.   
+Raw latitude and longitude values serve poorly as direct inputs for predictive modeling due to their non-linear nature. Effective geospatial modeling requires calculating derived metric features that quantify spatial relationships.   
 
-The geospatial columns—Lattitude and Longitude—provide the horizontal position of the measurement device. The data exhibits high spatial density within specific localized clusters (e.g., numerous points grouped around 49.4239X N, 7.753X E). This dense, path-specific sampling is highly advantageous for geostatistical techniques designed to leverage spatial autocorrelation.
+The first set of essential transformations involves establishing the physical relationship between the measurement device and the signal source. This is contingent upon correctly mapping the Grid identifiers to their corresponding Base Station (BS) coordinates. Once the BS location is known, calculating the distance between the measurement point and the BS is mandatory. This metric should be derived using accurate geometric models, such as Haversine distance, and projected into a planar system (e.g., UTM) for accurate distance calculations in meters. Distance is fundamental, as signal strength attenuation is logarithmically related to the separation between transmitter and receiver (path loss models). 
 
-The provided data, sourced from a delimited file named cleaned2_network_data.xlsx - Sheet1.csv, contains typical metrics collected during mobile network performance measurements, such as a drive test or MDT logging session. The structure of the data includes the following fields: Lattitude, Longitude, Altitude, Speed, RSRP_54_, SINR_54_, and Grid.   
 
-The geospatial columns—Lattitude and Longitude—provide the horizontal position of the measurement device. The data exhibits high spatial density within specific localized clusters (e.g., numerous points grouped around 49.4239X N, 7.753X E). This dense, path-specific sampling is highly advantageous for geostatistical techniques designed to leverage spatial autocorrelation.
+
+  
+
+
 
 
 
