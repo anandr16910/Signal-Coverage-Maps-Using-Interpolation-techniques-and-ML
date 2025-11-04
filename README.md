@@ -20,8 +20,16 @@ Raw latitude and longitude values serve poorly as direct inputs for predictive m
 
 The first set of essential transformations involves establishing the physical relationship between the measurement device and the signal source. This is contingent upon correctly mapping the Grid identifiers to their corresponding Base Station (BS) coordinates. Once the BS location is known, calculating the distance between the measurement point and the BS is mandatory. This metric should be derived using accurate geometric models, such as Haversine distance, and projected into a planar system (e.g., UTM) for accurate distance calculations in meters. Distance is fundamental, as signal strength attenuation is logarithmically related to the separation between transmitter and receiver (path loss models). 
 
+The choice of prediction architecture must balance high prediction accuracy with computational efficiency, particularly to enable the rapid regeneration of the predictive radio map. Modern approaches range from classic geostatistical methods optimized for spatial autocorrelation to advanced deep learning models that learn complex, non-linear feature relationships.
 
+ - Geostatistical Interpolation Approaches
+Geostatistical methods are explicitly designed to model spatially correlated data, a characteristic inherent in radio signal strength measurements, where adjacent locations often exhibit similar signal attenuation due to shadowing effects. The fact that the provided dataset exhibits high local density along specific measurement paths validates the strength of these approaches.   
 
+ - Limitations of Simple Interpolation Methods
+Simple linear models, such as Inverse Distance Weighting (IDW) interpolation, rely solely on weighting nearby measurement points inversely proportional to distance. While fast for inference , IDW fails to account for directionality, data clustering, and the specific statistical structure of wireless propagation environments. Consequently, IDW results in inferior prediction accuracy compared to methods that explicitly model the underlying spatial continuity.   
+
+ - Advanced Geostatistical Modeling: Kriging and Regression-Kriging
+Kriging is recognized as an optimal linear predictor that estimates values based on a variogram, a function that models the degree of spatial autocorrelation across distances. Ordinary Kriging (OK) minimizes prediction error and accounts for data clustering, reducing prediction bias. However, OK assumes stationarity, meaning the average signal level trend is constant across the service area. In reality, RSRP is affected by massive deterministic trends related to distance, clutter, and elevation—factors that violate the stationarity assumption
   
 
 
