@@ -45,9 +45,14 @@ Kriging is recognized as an optimal linear predictor that estimates values based
 
 ## How to run?
 
-Download the RSRP_prediction_using_ML.mlx raw file and ensure the dataset i.e. cleaned2_network_data.xlsx is in the same folder.
-Run this.
-
+ - Download RSRP_prediction_using_ML.mlx and cleaned2_network_data.xlsx
+ - Place both files in the same folder
+ - Open the .mlx file in MATLAB and run it
+ - enable parallel computing toolbox
+   ```if isempty(gcp('nocreate'))
+    parpool;
+     end
+    ```
 
 
 
