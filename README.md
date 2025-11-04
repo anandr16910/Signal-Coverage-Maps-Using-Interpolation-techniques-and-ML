@@ -48,11 +48,7 @@ Kriging is recognized as an optimal linear predictor that estimates values based
  - Download RSRP_prediction_using_ML.mlx and cleaned2_network_data.xlsx
  - Place both files in the same folder
  - Open the .mlx file in MATLAB and run it
- - enable parallel computing toolbox
-   ```if isempty(gcp('nocreate'))
-    parpool;
-     end
-    ```
+ - Some code parts require parallel computing toolbox(Initialization of parpool is appended in the code itself)
 
 
 
