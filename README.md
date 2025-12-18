@@ -1,5 +1,5 @@
 ## Signal-Coverage-Maps-Using-Interpolation-techniques-and-ML
-Signal quality estimation using ML techniques
+Advanced Machine Learning for RSRP Coverage Map Prediction
 
 # Abstract:
 Signal coverage metrics like SINR and RSRP using spatial interpolation techniques. By using ML techniques which enables to estimate or predict RSRQ for various locations in given terrain.
